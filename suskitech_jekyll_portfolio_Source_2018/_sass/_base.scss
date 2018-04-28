@@ -1,0 +1,72 @@
+//------------Standard Elements-----------------
+body{
+    font-family: 'Merriweather', serif;
+    font-size: $font-base-size;
+    background-color: $offwhite;
+    color: $grey;   
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+}
+h1{
+    font-size: $font-base-size*3.5;
+    line-height: $font-base-size*3.5;
+}
+h2{
+    font-size: $font-base-size*3;
+    line-height: $font-base-size*3;
+}
+h3{
+    font-size: $font-base-size*2.5;
+    line-height: $font-base-size*2.5;
+}
+h4{
+    font-size: $font-base-size*2.25;
+    line-height: $font-base-size*2.25;
+}
+h5{
+    font-size: $font-base-size*2;
+    line-height: $font-base-size*2;
+}
+h6{
+    font-size: $font-base-size*1.5;
+    line-height: $font-base-size*1.5;
+}
+
+a { 
+    font-family: 'Josefin Sans', sans-serif;
+}
+a, a:visited, a:focus, a:active {
+    color: $teal-dark;
+}
+a:hover, a.active {
+    color: $teal;
+}
+
+img {
+    max-width: 100%;
+    height:auto;
+    vertical-align: middle;
+}
+
+//------------Muss around with Bootstrap--------------
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+    iframe {
+        max-width: 100%;
+    }
+}

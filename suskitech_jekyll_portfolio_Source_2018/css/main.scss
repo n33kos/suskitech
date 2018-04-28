@@ -1,0 +1,74 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+//----------Vars------------
+//font
+$font-base-size: 14px;
+$spacing-unit: 14px;
+
+//color palette
+$grey-light: #aaa;
+$grey: #333333; //rgba(51, 51, 51, 100)
+//$offwhite: #f1edec; //rgba(241, 237, 236, 100)
+$offwhite: #ededf1;
+
+$teal-dark: #256b53; //rgba(37, 107, 83, 100)
+$teal: #3a8d6f; //rgba(58, 141, 111, 100)
+$teal-light: #61c59b; //rgba(97, 197, 155, 100)
+
+$blue: #68A3DD; //rgba(104,163,221,100)
+$blue-dark: #5788BA; //rgba(87,136,186,100)
+  
+$salmon-dark: darken(#be5b6a, 20%);
+$salmon: #be5b6a; //rgba(190, 91, 106, 100)
+
+$indigo-dark: darken(#4f518c, 20%);
+$indigo: #4f518c; //rgba(79, 81, 140, 100)
+
+$purple-dark: darken(#6b2f69, 20%);
+$purple: #6b2f69; //rgba(107, 47, 105, 100) 
+
+//etc
+$drop-shadow-color: rgba(0,0,0,0.4);
+
+//--------bootstrap responsive breakpoint mixin-------
+@mixin breakpoint($point){
+  @if ($point == lg){
+    @media (min-width: 1200px){ @content }
+  }
+  @else if ($point == md){
+    @media (min-width: 992px){ @content }
+  }
+  @else if ($point == sm){
+    @media (min-width: 768px){ @content }
+  }
+  @else if ($point == xs){
+    @media (min-width: 641px){ @content }
+  }
+  @else if ($point == xxs){
+    @media (min-width: 481px){ @content }
+  }
+  @else if ($point == xxxs){
+    @media  (max-width: 480px){ @content }
+  }
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "helpers",
+        "animations",
+        "slick",
+        "layout",
+        "websites",
+        "photography",
+        "code",
+        "jewelry",
+        "pixelart",
+        "motion",
+        "still",
+        "syntax-highlighting"
+;

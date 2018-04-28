@@ -1,0 +1,43 @@
+#pixelart-index-page {
+	img {
+		image-rendering: -moz-crisp-edges;
+		image-rendering: -o-crisp-edges;
+		image-rendering: -webkit-optimize-contrast;
+		-ms-interpolation-mode: nearest-neighbor;
+		image-rendering: pixelated;
+	}
+	.controls {
+		a, a:hover, a:visited, a:active {
+			font-size: 20px;
+			color: $grey;
+			margin-right: 10px;
+		}
+	}
+	#columns {
+		-webkit-column-count: 1;
+		-webkit-column-fill: auto;
+		-moz-column-count: 1;
+		-moz-column-fill: auto;
+		column-count: 1;
+		column-fill: auto;
+	}
+	.art {
+		display: inline-block;
+		-webkit-column-break-inside: avoid;
+		-moz-column-break-inside: avoid;
+		column-break-inside: avoid;
+		
+		-webkit-transition: all .2s ease;
+		-moz-transition: all .2s ease;
+		-o-transition: all .2s ease;
+		transition: all .2s ease;
+
+		box-shadow: inset 0 0 60px 10px rgba(0, 0, 0, 0.3);
+
+		@media(max-width:481px){
+			margin: 5px auto;
+			float: none;
+			display: block;
+		}
+	}
+}

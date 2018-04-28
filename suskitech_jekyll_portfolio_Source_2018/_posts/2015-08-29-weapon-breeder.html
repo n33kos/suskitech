@@ -1,0 +1,77 @@
+---
+layout: post
+title: Weapon Breeder
+date: 2015-08-29 02:29
+author: n33kos
+category: Code
+permalink: /code/weaponbreeder
+thumb_image: /img/code/thumb_weaponbreeder.jpg
+---
+<div class="margin-bottom-15">
+    A customizable Weapon, Item, Armor, or Anything breeding system.
+    Each attribute (or allele) of the customizable entity types are genetically transferrable, allowing for the seeded random generation of weapons and items
+</div>
+<div class="margin-bottom-15">
+Seed values are all managed by their respective Type object. All values for all types are merged into the probability cloud to ensure genetic compatability with one another.
+
+You can easily add a new type by adding a new Type object to the $probability_cloud array.
+
+{% highlight ruby %}
+$probability_cloud = generate_probability_cloud([
+    Type.new("daisies", {
+        :color => ["red","blue","green","white"], #strings
+        :height => [1,4], #integer min/max range
+        :is_awesome => [true,false] #booleans
+    })
+])
+{% endhighlight %}
+</div>
+<a href="https://github.com/n33kos/weaponbreeder" title="Weapon Breeder On GitHub" target="_blank" class="font-16 bold margin-bottom-15 underline">Weapon Breeder On GitHub</a>
+<div class="margin-bottom-15">
+	<h6>Example Output</h6>
+	{% highlight ruby %}
+Generation 1
+-----------------
+is_mortal - true
+hit_points - 944
+entity_type - weapon
+size - huge
+elemental_type - air
+damage - 126.0
+sprite - mutated rock
+projectile - bomb
+
+Generation 2
+-----------------
+is_mortal - true
+hit_points - 944
+entity_type - weapon
+size - huge
+elemental_type - air
+damage - 126.0
+sprite - mutated rock
+projectile - bomb
+
+Generation 3
+-----------------
+is_mortal - true
+hit_points - 944
+entity_type - weapon
+size - huge
+elemental_type - air
+damage - 327
+sprite - mutated zombie
+projectile - bomb
+
+Generation 4
+-----------------
+is_mortal - true
+hit_points - 944
+entity_type - object
+size - huge
+elemental_type - air
+damage - 327
+sprite - mutated zombie
+projectile - beam
+	{% endhighlight %}
+</div>

@@ -1,0 +1,58 @@
+---
+layout: page
+---
+<div id="code-index-page" class="margin-top-25">
+  <h2 class="page-title visible-xs text-center">Code</h2>
+  <div class="row">
+    <div class="col-sm-6 col-md-8">
+      <div class="row multi-columns-row">
+        {% for post in site.categories.Code %}
+          <div class="col-xsxs-12 col-xs-6 col-sm-12 col-md-4 padding-top-30 padding-bottom-30">
+            <a href="{{post.url}}" title="{{post.title}}">
+              <span class="code-entry block shadow-5 animated slideInUp" style="background-image:url('{{post.thumb_image}}');">
+                <span class="block font-12 filedate grey">{{post.date | date: "%a, %b %d %Y" }}</span>
+                <span class="block font-16 filename grey">{{post.title | replace:' ','_'}}</span>
+              </span>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+      <hr>
+      <h3 class="margin-bottom-25">Recent Pens</h3>
+
+      <p data-height="600" data-theme-id="25948" data-slug-hash="avyGEr" data-default-tab="result" data-user="n33kos" data-embed-version="2" class="codepen"></p>
+      <p data-height="600" data-theme-id="25948" data-slug-hash="ZbXdYG" data-default-tab="result" data-user="n33kos" data-embed-version="2" class="codepen"></p>
+      <p data-height="600" data-theme-id="25948" data-slug-hash="LRVKVk" data-default-tab="result" data-user="n33kos" data-embed-version="2" class="codepen"></p>
+
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="github-image margin-top-20 animated slideInUp">
+        <a href="http://github.com/n33kos/">
+          <img src="https://octodex.github.com/images/original.png" alt="github octodex image">
+        </a>
+      </div>
+      <h6 class="text-center margin-bottom-30 animated slideInUp">Github Repositories</h6>
+      <div class="repos animated slideInUp"></div>
+    </div>
+  </div>
+</div>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+  //---------------------GITHUB REPOS----------------------
+  $.getJSON('https://api.github.com/users/{{site.github_username}}/repos?sort=updated&order=desc',
+  function data(data) {
+    if(data){
+      //console.log(data);
+      $.each( data, function( key, value ) {
+        $('.repos').append(
+          '<div class="repo-name"><a href="' + value.clone_url + '">' + value.full_name + '</a></div>' +
+          '<div class="description">' + value.description + '</div>' +
+          '<pre class="clone-url margin-bottom-30">' + value.clone_url + '</pre>'
+        );
+      });
+
+    }
+  });
+});
+</script>

@@ -1,0 +1,92 @@
+#code-index-page {
+	.code-entry {
+		height: 200px;
+		width: 175px;
+		position: relative;
+		margin: 0 auto;
+		float: none;
+		border-radius: 6px;
+		padding:15px;
+		padding-top: 45px;
+		background-size: cover;
+		background-position: 50% 50%;
+	}
+	.col-xsxs-12 {
+		@media(max-width:450px){
+			width: 100%;
+		}
+	}
+	.code-entry:before, .code-entry:after {
+		display: block;
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		top: 0;
+		right: 0;
+		content: "";
+	}
+	.code-entry:before {
+		border-top: solid 30px #fff;
+		border-right: solid 30px #fff;
+		border-left: solid 30px transparent;
+		border-bottom: solid 30px transparent;
+		top: -10px;
+		right: -10px;
+		-webkit-transition: all 0.15s ease;
+		transition: all 0.15s ease;
+	}
+	.code-entry:after {
+		border-bottom: solid 20px #D5D5D5;
+		border-left: solid 20px #D5D5D5;
+		border-right: solid 20px transparent;
+		border-top: solid 20px transparent;
+		border-radius: 0 0 0 6px;
+		-moz-box-shadow: -1px 1px 2px $drop-shadow-color;
+		-webkit-box-shadow: -1px 1px 2px $drop-shadow-color;
+		box-shadow: -1px 1px 2px $drop-shadow-color;
+		-webkit-transition: all 0.15s ease;
+		transition: all 0.15s ease;
+	}
+	.code-entry:hover:after {
+		border-bottom: solid 30px #D5D5D5;
+		border-left: solid 30px #D5D5D5;
+		border-right: solid 30px transparent;
+		border-top: solid 30px transparent;
+	}
+	.code-entry:hover:before {
+		border-top: solid 40px #fff;
+		border-right: solid 40px #fff;
+		border-left: solid 40px transparent;
+		border-bottom: solid 40px transparent;
+	}
+	.filename {
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+		width: 100%;
+		text-align: center;
+	}
+	.filedate {
+		position: absolute;
+		bottom: 5px;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		background: rgba(255,255,255,0.6);
+	}
+	.github-image {
+		width: 50%;
+		margin: 0 auto;
+		margin-top: 30px;
+		@include breakpoint(sm) {
+			margin: 0 auto;
+			margin-top: 0;
+		}
+	}
+	.repos {
+		pre {
+			word-wrap: normal;
+			overflow: hidden;
+		}
+	}
+}

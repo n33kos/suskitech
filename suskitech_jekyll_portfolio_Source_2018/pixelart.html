@@ -1,0 +1,36 @@
+---
+layout: page
+title: Pixel Art
+permalink: /pixelart/
+nav_display: false
+---
+<div id="pixelart-index-page" class="margin-top-25">
+	<h2 class="page-title text-center visible-xs">Pixel Art</h2>
+		<div class="controls margin-top-10 margin-bottom-10">
+			<a href="#" class="scale-trigger" data-scale="100px">1x</a>
+			<a href="#" class="scale-trigger underline" data-scale="200px">2x</a>
+			<a href="#" class="scale-trigger" data-scale="300px">3x</a>
+			<a href="#" class="scale-trigger" data-scale="400px">4x</a>
+		</div>
+		<div class="pixelartwrapper">
+			<div id="columns">
+				{% include component_pixelart.html limit=-1 %}
+			</div>
+		</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function($){ 
+	$('.scale-trigger').click(function(e){
+		e.preventDefault();
+		
+		$('.scale-trigger').removeClass('underline');
+		$(this).addClass('underline');
+
+		var scale = $(this).data('scale');
+		var images = $('.pixelartwrapper img');
+		for (var i = 0; i < images.length; i++) {
+			$(images[i]).attr('width',scale);
+		};
+	});
+});
+</script>

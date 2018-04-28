@@ -1,0 +1,44 @@
+---
+layout: page
+title: Images
+permalink: /images/
+nav_display: true
+---
+<div id="images-index-page" class="margin-top-45">
+  <h3 class="margin-bottom-0">Pixel Art</h3>
+  <div id="pixelart-index-page">
+      <div class="pixelartwrapper padding-top-30">
+        <div id="columns">
+          {% include component_pixelart.html limit=10 %}
+        </div>
+      </div>
+      <a href="/pixelart/" title="View All Pixel Art" class="underline margin-top-15 block">View All Pixel Art ></a>
+  </div>
+
+  <hr>
+  <h3 class="margin-bottom-0">Digital Art</h3>
+  <div id="still-index-page" class="margin-top-15">
+    <div class="row multi-columns-row">
+      {% for post in site.categories.Still limit:6 %}
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 entry animated slideInUp">
+          <div class="shadow-5">
+            <h5 class="padding-15">
+              <a href="{{post.url}}" title="{{post.title}}">
+                {{ post.title }}
+              </a>
+            </h5>
+            <div class="thumb">
+              <a href="{{post.url}}" title="{{post.title}}">
+                <img src="/img/cache/still/{{post.thumb_img}}" alt="{{post.title}}">
+              </a>
+            </div>
+            <div class="summary padding-15">
+              {{ post.summary }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <a href="/still/" title="View All Still Images" class="underline block">View All Still Images ></a>
+  </div>
+</div>

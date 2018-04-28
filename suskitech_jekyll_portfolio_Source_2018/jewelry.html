@@ -1,0 +1,81 @@
+---
+layout: page
+title: Jewelry
+permalink: /jewelry/
+nav_display: true
+---
+<div id="jewelry-index-page" class="margin-top-20">
+  <h2 class="page-title visible-xs">Jewelry</h2>
+  <div class="expand-all font-16"></div>
+    {% for post in site.categories.Jewelry %}
+      {% cycle '<div class="row">', '' %}
+        <div class="col-xs-12 col-sm-6 col-md-6 animated slideInUp">
+          {% if forloop.index0 == 0 or forloop.index0 == 1 %}
+            {% assign defaultOpen = 'true' %}
+          {% else %}
+            {% assign defaultOpen = 'false' %}
+          {% endif %}
+          <div class="piece-gallery shadow-5 {% if defaultOpen == 'true' %}active{% endif %}">
+            {% for pic in post.images %}
+              <div class="piece {% if defaultOpen == 'true' %}active{% endif %}">
+                <div class="control">
+                  <div class="openclose"></div>
+                  <h5>{{post.title}}</h5>
+                  <ul class="mats">
+                    {% for mat in post.materials %}
+                      <li>{{ mat }}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <img data-lazy="/img/cache/jewelry/{{ pic }}"/>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% cycle '', '</div>' %}
+    {% endfor %}
+</div>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+
+    //Open on click
+    $('.piece-gallery').click(function(){
+      if(!$(this).hasClass('active')){
+        $(this).slick('slickPlay').addClass('active').find('.piece').addClass('active');
+      }
+    });
+
+    //close on click of  titlee, mats, or close button
+    $('.control h5, .control .openclose, .control .mats').click(function(e){
+      e.stopPropagation();
+      var $gallery = $(this).parents('.piece-gallery');
+      if($gallery.hasClass('active')){
+        $gallery.slick('slickPause').removeClass('active').find('.piece').removeClass('active');
+      }
+    });
+
+    //expand or contract all
+    $('.expand-all').click(function(){
+      if ($(this).hasClass('active')){
+        $(this).removeClass('active');
+        $('.piece-gallery').removeClass('active');
+        $('.piece').removeClass('active');
+      }else{
+        $(this).addClass('active');
+        $('.piece-gallery').addClass('active');
+        $('.piece').addClass('active');
+      }
+    });
+
+    var slickGallery = $('.piece-gallery').slick({
+      dots: true,
+      pauseOnDotsHover: true,
+      lazyLoad: 'ondemand',
+      autoplay: false,
+      infinite: true,
+      prevArrow: '',
+      nextArrow: ''
+    });
+
+  });
+</script>

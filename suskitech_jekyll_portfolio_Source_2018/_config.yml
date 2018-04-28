@@ -1,0 +1,54 @@
+#---------BUILD DEPENDENCIES-----------
+# Ruby:
+# Version 2.4.1
+#
+# Gems:
+# jekyll - 3.8.0
+# bundler - 1.16.1
+# sass - 3.5.6
+# mini_magick - 4.8.0 (required installation of graphicsmagick)
+#
+# Build instructions:
+# > jekyll build
+#
+# Local Serve Instruction:
+# > jekyll serve
+#
+# Push Instructions:
+# -Build locally
+# -Upload
+
+#---------SITE SETTINGS----------
+title: Creations | Suskitech.Org
+tagline: Nicholas Suski
+email: ['006e00690063006b','007300750073006b00690074006500630068002e006f00720067'] #hex encoded [address, domain]
+description: "A portfolio of work by Nicholas Suski"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://suskitech.org" # the base hostname & protocol for your site
+timezone: America/Denver
+
+#-------USERNAMES----------
+github_username:  n33kos
+codepen_username: n33kos
+
+#---------BUILD SETTINGS---------------
+markdown: kramdown
+destination: ../suskitech_jekyll_portfolio_Rendered/
+highlighter: true
+
+#-----------GEMS--------------
+plugins: [mini_magick]
+
+mini_magick:
+    jewelry: # Preset name
+        source: img/jewelry # source directory - change this to whatever you want
+        destination: img/cache/jewelry # generated destination directory
+        resize: "1024x1024^" # standard imagemagick options - you can chain multiple commands
+        gravity: "center"
+        extent: "1024x1024"
+    still: # Preset name
+        source: img/still # source directory - change this to whatever you want
+        destination: img/cache/still # generated destination directory
+        resize: "540x540^" # standard imagemagick options - you can chain multiple commands
+        gravity: "center"
+        extent: "540x540"
