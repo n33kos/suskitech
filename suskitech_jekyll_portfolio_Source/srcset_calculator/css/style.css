@@ -1,0 +1,33 @@
+h1, h2, h3, h4, h5, h6, p, label{
+	color:#fff;
+}
+body{
+	background:#333;
+}
+.alert-success h3{
+	color:#3c763d;
+}
+.alert-info h3{
+	color:#31708f;
+}
+.white{
+	color: white;
+}
+.siteTitle a{
+	color: white;
+	font-size: 12px;
+}
+.siteTitle{
+	margin: 0;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	opacity: 0.5;
+	transition: all 0.5s ease;
+}
+.siteTitle:hover{
+	opacity: 1;
+}
+.margin-top-30{
+	margin-top: 30px;
+}

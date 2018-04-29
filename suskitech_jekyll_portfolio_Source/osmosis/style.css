@@ -1,0 +1,239 @@
+/*-----------------------Reset--------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-----------------------Styles--------------------------*/
+html, body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    margin:0;
+    padding:0;
+}
+.small {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -webkit-transform-origin: 0 0;
+    -moz-transform: scale(1);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(1);
+    -o-transform-origin: 0 0;
+    -ms-transform: scale(1);
+    -ms-transform-origin: 0 0;
+}
+.medium {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -webkit-transform-origin: 0 0;
+    -moz-transform: scale(2);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(2);
+    -o-transform-origin: 0 0;
+    -ms-transform: scale(2);
+    -ms-transform-origin: 0 0;
+}
+.large {
+    transform: scale(3);
+    -webkit-transform: scale(3);
+    -webkit-transform-origin: 0 0;
+    -moz-transform: scale(3);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(3);
+    -o-transform-origin: 0 0;
+    -ms-transform: scale(3);
+    -ms-transform-origin: 0 0;
+}
+.largest {
+    transform: scale(4);
+    -webkit-transform: scale(4);
+    -webkit-transform-origin: 0 0;
+    -moz-transform: scale(4);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(4);
+    -o-transform-origin: 0 0;
+    -ms-transform: scale(4);
+    -ms-transform-origin: 0 0;
+}
+#centermaker {
+    width:1px;
+    height:1px;
+    position:absolute;
+    top:49.99%;
+    left:49.99%;
+}
+#wordbox {
+    position:absolute;
+    top:-32px;
+    left:0px;
+    z-index:3;
+    white-space:nowrap;
+    font-size:60px;
+    height:60px;
+        /*
+		-webkit-transition: all 100ms ease;
+		-moz-transition: all 100ms ease;
+		-ms-transition: all 100ms ease;
+		-o-transition: all 100ms ease;
+		transition: all 100ms ease;
+        */
+}
+#whitebg {
+	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+	height:80px;
+    width:430px;
+    position:absolute;
+    left:-215px;
+    top:-40px;
+    z-index:2;
+    background:#fff;
+}
+#spotmarker {
+    position:absolute;
+    left:0;
+    top:-55px;
+    z-index:1;
+    width:5px;
+    height:110px;
+    background-color:#000;
+}
+#lines {
+    position:absolute;
+    left:-210px;
+    top:-45px;
+    z-index:0;
+    width:420px;
+    height:90px;
+    background-color:#000;
+}
+#textvalue {
+    visibility:hidden;
+}
+#insertText{
+    overflow:auto;
+}
+#textPlace{
+    margin:10px;
+	width:70%;
+    min-width:275px;
+	height:100px;
+	background:#eee;
+	float:left;
+	overflow-x:hidden;
+	overflow-y:auto;
+		-webkit-transition: all 2000ms ease;
+		-moz-transition: all 2000ms ease;
+		-ms-transition: all 2000ms ease;
+		-o-transition: all 2000ms ease;
+		transition: all 2000ms ease;
+}
+#wpmPlace{
+	width:75px;
+	height:40px;
+	background:#eee;
+	float:left;
+}
+#textSubmit{
+    margin:10px;
+	width:75px;
+	height:40px;
+	background:#eee;
+	float:left;
+}
+#sizePlace{
+	width:75px;
+	height:40px;
+	background:#eee;
+	float:left;
+}
+#colorPlace{
+	width:75px;
+	height:40px;
+	background:#eee;
+	float:left;	
+}
+#bookmarklet{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    width: 100px;
+    margin-top: 16px;
+    height: 40px;
+    background: rgba(100,100,100,0.75);
+    float: left;
+}
+#settingsPanel{
+    width:100%;
+    z-index:8;
+    position:absolute;
+    background:rgba(100,100,100,0.75);
+    border-top:1px solid #000;
+    bottom:0;
+    margin:0;
+}
+fieldset.sm{
+    float:left;
+    width:75px;
+    margin:10px;
+}
+fieldset.md{
+    float:left;
+    width:125px;
+    margin:10px;
+}
+fieldset.lg{
+    float:left;
+    width:200px;
+    margin:10px;
+}
+.clearfix{
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.colorpicker{
+    z-index:100;
+}

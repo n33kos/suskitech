@@ -3,10 +3,10 @@
   <channel>
     <title>Creations | Suskitech.Org</title>
     <description>A portfolio of work by Nicholas Suski</description>
-    <link>http://suskitech.org/</link>
-    <atom:link href="http://suskitech.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 28 Apr 2018 16:01:13 -0600</pubDate>
-    <lastBuildDate>Sat, 28 Apr 2018 16:01:13 -0600</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 29 Apr 2018 13:17:19 -0600</pubDate>
+    <lastBuildDate>Sun, 29 Apr 2018 13:17:19 -0600</lastBuildDate>
     <generator>Jekyll v3.8.0</generator>
     
     
@@ -16,8 +16,8 @@
 	&lt;div class=&quot;margin-bottom-15&quot;&gt;
     &lt;img src=&quot;/img/code/thumb_magi...</description>
         <pubDate>Thu, 01 Mar 2018 02:29:00 -0700</pubDate>
-        <link>http://suskitech.org/code/magicus</link>
-        <guid isPermaLink="true">http://suskitech.org/code/magicus</guid>
+        <link>http://localhost:4000/code/magicus/</link>
+        <guid isPermaLink="true">http://localhost:4000/code/magicus/</guid>
         
         
         <category>Code</category>
@@ -33,8 +33,8 @@
     &lt;p&gt;
       &lt;a target=&quot;_blank&quot; h...</description>
         <pubDate>Thu, 01 Mar 2018 02:29:00 -0700</pubDate>
-        <link>http://suskitech.org/code/zoomboom</link>
-        <guid isPermaLink="true">http://suskitech.org/code/zoomboom</guid>
+        <link>http://localhost:4000/code/zoomboom/</link>
+        <guid isPermaLink="true">http://localhost:4000/code/zoomboom/</guid>
         
         
         <category>Code</category>
@@ -47,8 +47,8 @@
         <title>Havenly.com</title>
         <description></description>
         <pubDate>Wed, 08 Mar 2017 01:48:00 -0700</pubDate>
-        <link>http://suskitech.org/web/2017/03/08/havenly.html</link>
-        <guid isPermaLink="true">http://suskitech.org/web/2017/03/08/havenly.html</guid>
+        <link>http://localhost:4000/web/2017/03/08/havenly.html</link>
+        <guid isPermaLink="true">http://localhost:4000/web/2017/03/08/havenly.html</guid>
         
         
         <category>Web</category>
@@ -64,8 +64,8 @@
 		&lt;p&gt;
 			You are a shifty warlo...</description>
         <pubDate>Mon, 17 Oct 2016 02:29:00 -0600</pubDate>
-        <link>http://suskitech.org/code/ultimatewarlock</link>
-        <guid isPermaLink="true">http://suskitech.org/code/ultimatewarlock</guid>
+        <link>http://localhost:4000/code/ultimatewarlock/</link>
+        <guid isPermaLink="true">http://localhost:4000/code/ultimatewarlock/</guid>
         
         
         <category>Code</category>
@@ -78,8 +78,8 @@
         <title>Helenadamsrealty.com</title>
         <description></description>
         <pubDate>Wed, 12 Oct 2016 01:48:00 -0600</pubDate>
-        <link>http://suskitech.org/web/2016/10/12/HelenAdams.html</link>
-        <guid isPermaLink="true">http://suskitech.org/web/2016/10/12/HelenAdams.html</guid>
+        <link>http://localhost:4000/web/2016/10/12/HelenAdams.html</link>
+        <guid isPermaLink="true">http://localhost:4000/web/2016/10/12/HelenAdams.html</guid>
         
         
         <category>Web</category>
@@ -92,8 +92,8 @@
         <title>Underwatch</title>
         <description></description>
         <pubDate>Mon, 01 Aug 2016 17:35:00 -0600</pubDate>
-        <link>http://suskitech.org/video/2016/08/01/underwatch.html</link>
-        <guid isPermaLink="true">http://suskitech.org/video/2016/08/01/underwatch.html</guid>
+        <link>http://localhost:4000/video/2016/08/01/underwatch.html</link>
+        <guid isPermaLink="true">http://localhost:4000/video/2016/08/01/underwatch.html</guid>
         
         
         <category>Video</category>
@@ -108,8 +108,8 @@
 	&lt;div class=&quot;margin-bottom-15&quot;&gt;
 		&lt;p&gt;Underwatch is an objective ...</description>
         <pubDate>Mon, 01 Aug 2016 02:29:00 -0600</pubDate>
-        <link>http://suskitech.org/code/underwatch</link>
-        <guid isPermaLink="true">http://suskitech.org/code/underwatch</guid>
+        <link>http://localhost:4000/code/underwatch/</link>
+        <guid isPermaLink="true">http://localhost:4000/code/underwatch/</guid>
         
         
         <category>Code</category>
@@ -122,8 +122,8 @@
         <title>LandVest.com</title>
         <description></description>
         <pubDate>Mon, 04 Apr 2016 01:54:00 -0600</pubDate>
-        <link>http://suskitech.org/web/2016/04/04/landvest.html</link>
-        <guid isPermaLink="true">http://suskitech.org/web/2016/04/04/landvest.html</guid>
+        <link>http://localhost:4000/web/2016/04/04/landvest.html</link>
+        <guid isPermaLink="true">http://localhost:4000/web/2016/04/04/landvest.html</guid>
         
         
         <category>Web</category>
@@ -136,8 +136,8 @@
         <title>Ruby Food Chain Simulation</title>
         <description></description>
         <pubDate>Wed, 23 Mar 2016 17:35:00 -0600</pubDate>
-        <link>http://suskitech.org/video/2016/03/23/foodchainvideo.html</link>
-        <guid isPermaLink="true">http://suskitech.org/video/2016/03/23/foodchainvideo.html</guid>
+        <link>http://localhost:4000/video/2016/03/23/foodchainvideo.html</link>
+        <guid isPermaLink="true">http://localhost:4000/video/2016/03/23/foodchainvideo.html</guid>
         
         
         <category>Video</category>
@@ -156,8 +156,8 @@
         <title>Bairdwarner.com</title>
         <description></description>
         <pubDate>Mon, 19 Oct 2015 01:55:00 -0600</pubDate>
-        <link>http://suskitech.org/web/2015/10/19/bairdwarner.html</link>
-        <guid isPermaLink="true">http://suskitech.org/web/2015/10/19/bairdwarner.html</guid>
+        <link>http://localhost:4000/web/2015/10/19/bairdwarner.html</link>
+        <guid isPermaLink="true">http://localhost:4000/web/2015/10/19/bairdwarner.html</guid>
         
         
         <category>Web</category>
@@ -170,8 +170,8 @@
         <title>Mcenearney.com</title>
         <description></description>
         <pubDate>Mon, 19 Oct 2015 01:54:00 -0600</pubDate>
-        <link>http://suskitech.org/web/2015/10/19/mcenearney.html</link>
-        <guid isPermaLink="true">http://suskitech.org/web/2015/10/19/mcenearney.html</guid>
+        <link>http://localhost:4000/web/2015/10/19/mcenearney.html</link>
+        <guid isPermaLink="true">http://localhost:4000/web/2015/10/19/mcenearney.html</guid>
         
         
         <category>Web</category>
@@ -184,8 +184,8 @@
         <title>Reinhartrealtors.com</title>
         <description></description>
         <pubDate>Mon, 19 Oct 2015 01:53:00 -0600</pubDate>
-        <link>http://suskitech.org/web/2015/10/19/reinhartrealtors.html</link>
-        <guid isPermaLink="true">http://suskitech.org/web/2015/10/19/reinhartrealtors.html</guid>
+        <link>http://localhost:4000/web/2015/10/19/reinhartrealtors.html</link>
+        <guid isPermaLink="true">http://localhost:4000/web/2015/10/19/reinhartrealtors.html</guid>
         
         
         <category>Web</category>
@@ -198,8 +198,8 @@
         <title>Wkre.com</title>
         <description></description>
         <pubDate>Mon, 19 Oct 2015 01:52:00 -0600</pubDate>
-        <link>http://suskitech.org/web/2015/10/19/wkre.html</link>
-        <guid isPermaLink="true">http://suskitech.org/web/2015/10/19/wkre.html</guid>
+        <link>http://localhost:4000/web/2015/10/19/wkre.html</link>
+        <guid isPermaLink="true">http://localhost:4000/web/2015/10/19/wkre.html</guid>
         
         
         <category>Web</category>
@@ -212,8 +212,8 @@
         <title>Vailrealestate.com</title>
         <description></description>
         <pubDate>Mon, 19 Oct 2015 01:51:00 -0600</pubDate>
-        <link>http://suskitech.org/web/2015/10/19/vailrealestate.html</link>
-        <guid isPermaLink="true">http://suskitech.org/web/2015/10/19/vailrealestate.html</guid>
+        <link>http://localhost:4000/web/2015/10/19/vailrealestate.html</link>
+        <guid isPermaLink="true">http://localhost:4000/web/2015/10/19/vailrealestate.html</guid>
         
         
         <category>Web</category>
@@ -226,8 +226,8 @@
         <title>Studycenters.org</title>
         <description></description>
         <pubDate>Mon, 19 Oct 2015 01:49:00 -0600</pubDate>
-        <link>http://suskitech.org/web/2015/10/19/studycenters.html</link>
-        <guid isPermaLink="true">http://suskitech.org/web/2015/10/19/studycenters.html</guid>
+        <link>http://localhost:4000/web/2015/10/19/studycenters.html</link>
+        <guid isPermaLink="true">http://localhost:4000/web/2015/10/19/studycenters.html</guid>
         
         
         <category>Web</category>
@@ -242,8 +242,8 @@
 	&lt;div class=&quot;margin-bottom-15&quot;&gt;
 		&lt;p&gt;A ruby food chain simulator...</description>
         <pubDate>Sun, 06 Sep 2015 02:29:00 -0600</pubDate>
-        <link>http://suskitech.org/code/rubyfoodchain</link>
-        <guid isPermaLink="true">http://suskitech.org/code/rubyfoodchain</guid>
+        <link>http://localhost:4000/code/rubyfoodchain/</link>
+        <guid isPermaLink="true">http://localhost:4000/code/rubyfoodchain/</guid>
         
         
         <category>Code</category>
@@ -257,8 +257,8 @@
         <description>&lt;div class=&quot;margin-bottom-15&quot;&gt;
     A customizable Weapon, Item, Armor, or Anything breeding syst...</description>
         <pubDate>Sat, 29 Aug 2015 02:29:00 -0600</pubDate>
-        <link>http://suskitech.org/code/weaponbreeder</link>
-        <guid isPermaLink="true">http://suskitech.org/code/weaponbreeder</guid>
+        <link>http://localhost:4000/code/weaponbreeder/</link>
+        <guid isPermaLink="true">http://localhost:4000/code/weaponbreeder/</guid>
         
         
         <category>Code</category>
@@ -275,8 +275,8 @@
 
 &lt;p&gt;A javascript simulator inspired by Conway’s Game of Life. This implementation is des...</description>
         <pubDate>Mon, 09 Feb 2015 02:29:00 -0700</pubDate>
-        <link>http://suskitech.org/code/rgbgameoflife</link>
-        <guid isPermaLink="true">http://suskitech.org/code/rgbgameoflife</guid>
+        <link>http://localhost:4000/code/rgbgameoflife/</link>
+        <guid isPermaLink="true">http://localhost:4000/code/rgbgameoflife/</guid>
         
         
         <category>Code</category>
@@ -289,8 +289,8 @@
         <title>PhPyChing</title>
         <description>&lt;p&gt;PhPyChing is an iChing reading generator written in python and deployed with a simple PHP inte...</description>
         <pubDate>Thu, 13 Nov 2014 03:00:00 -0700</pubDate>
-        <link>http://suskitech.org/code/phpyching</link>
-        <guid isPermaLink="true">http://suskitech.org/code/phpyching</guid>
+        <link>http://localhost:4000/code/phpyching/</link>
+        <guid isPermaLink="true">http://localhost:4000/code/phpyching/</guid>
         
         
         <category>Code</category>
@@ -311,8 +311,8 @@
         <title>Osmosis</title>
         <description>&lt;p&gt;Osmosis is an experiment in rapid textual data absorption. The repository can be found on gith...</description>
         <pubDate>Thu, 27 Mar 2014 00:25:00 -0600</pubDate>
-        <link>http://suskitech.org/code/osmosis</link>
-        <guid isPermaLink="true">http://suskitech.org/code/osmosis</guid>
+        <link>http://localhost:4000/code/osmosis/</link>
+        <guid isPermaLink="true">http://localhost:4000/code/osmosis/</guid>
         
         
         <category>Code</category>
@@ -332,8 +332,8 @@
         <description>&lt;p&gt;&lt;img alt=&quot;Danny&quot; src=&quot;/img/still/DeadEyeDanny.jpg&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 02 Sep 2013 17:50:00 -0600</pubDate>
-        <link>http://suskitech.org/still/2013/09/02/dead-eye-danny.html</link>
-        <guid isPermaLink="true">http://suskitech.org/still/2013/09/02/dead-eye-danny.html</guid>
+        <link>http://localhost:4000/still/2013/09/02/dead-eye-danny.html</link>
+        <guid isPermaLink="true">http://localhost:4000/still/2013/09/02/dead-eye-danny.html</guid>
         
         
         <category>Still</category>
@@ -347,8 +347,8 @@
         <description>&lt;img alt=&quot;Spirit_Vision&quot; src=&quot;/img/still/BeforeCompletion.jpg&quot;&gt;
 </description>
         <pubDate>Mon, 02 Sep 2013 07:05:00 -0600</pubDate>
-        <link>http://suskitech.org/still/2013/09/02/Before-Completion.html</link>
-        <guid isPermaLink="true">http://suskitech.org/still/2013/09/02/Before-Completion.html</guid>
+        <link>http://localhost:4000/still/2013/09/02/Before-Completion.html</link>
+        <guid isPermaLink="true">http://localhost:4000/still/2013/09/02/Before-Completion.html</guid>
         
         
         <category>Still</category>
@@ -364,8 +364,8 @@
         <description>
 </description>
         <pubDate>Tue, 20 Aug 2013 17:35:00 -0600</pubDate>
-        <link>http://suskitech.org/video/2013/08/20/demo-reel-2013.html</link>
-        <guid isPermaLink="true">http://suskitech.org/video/2013/08/20/demo-reel-2013.html</guid>
+        <link>http://localhost:4000/video/2013/08/20/demo-reel-2013.html</link>
+        <guid isPermaLink="true">http://localhost:4000/video/2013/08/20/demo-reel-2013.html</guid>
         
         
         <category>Video</category>
@@ -381,8 +381,8 @@
         <description>
 </description>
         <pubDate>Wed, 12 Jun 2013 20:24:00 -0600</pubDate>
-        <link>http://suskitech.org/video/2013/06/12/do-work-music-video.html</link>
-        <guid isPermaLink="true">http://suskitech.org/video/2013/06/12/do-work-music-video.html</guid>
+        <link>http://localhost:4000/video/2013/06/12/do-work-music-video.html</link>
+        <guid isPermaLink="true">http://localhost:4000/video/2013/06/12/do-work-music-video.html</guid>
         
         
         <category>Video</category>
@@ -406,8 +406,8 @@
         <description>&lt;p&gt;&lt;img alt=&quot;Spirit_Vision&quot; src=&quot;/img/still/Spirit_Vision.jpg&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 03 Mar 2013 07:05:00 -0700</pubDate>
-        <link>http://suskitech.org/still/2013/03/03/a-loving-spirit.html</link>
-        <guid isPermaLink="true">http://suskitech.org/still/2013/03/03/a-loving-spirit.html</guid>
+        <link>http://localhost:4000/still/2013/03/03/a-loving-spirit.html</link>
+        <guid isPermaLink="true">http://localhost:4000/still/2013/03/03/a-loving-spirit.html</guid>
         
         
         <category>Still</category>
@@ -421,8 +421,8 @@
         <description>
 </description>
         <pubDate>Sat, 19 Jan 2013 01:29:00 -0700</pubDate>
-        <link>http://suskitech.org/video/2013/01/19/vanished-promo-video.html</link>
-        <guid isPermaLink="true">http://suskitech.org/video/2013/01/19/vanished-promo-video.html</guid>
+        <link>http://localhost:4000/video/2013/01/19/vanished-promo-video.html</link>
+        <guid isPermaLink="true">http://localhost:4000/video/2013/01/19/vanished-promo-video.html</guid>
         
         
         <category>Video</category>
@@ -436,8 +436,8 @@
         <description>
 </description>
         <pubDate>Tue, 23 Oct 2012 03:59:00 -0600</pubDate>
-        <link>http://suskitech.org/video/2012/10/23/nightshift-intro-video.html</link>
-        <guid isPermaLink="true">http://suskitech.org/video/2012/10/23/nightshift-intro-video.html</guid>
+        <link>http://localhost:4000/video/2012/10/23/nightshift-intro-video.html</link>
+        <guid isPermaLink="true">http://localhost:4000/video/2012/10/23/nightshift-intro-video.html</guid>
         
         
         <category>Video</category>
@@ -451,8 +451,8 @@
         <description>&lt;p&gt;&lt;img alt=&quot;Spirit_Vision&quot; src=&quot;/img/still/FallenWarrior.jpg&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 12 Oct 2012 20:40:00 -0600</pubDate>
-        <link>http://suskitech.org/still/2012/10/12/fallenwarrior.html</link>
-        <guid isPermaLink="true">http://suskitech.org/still/2012/10/12/fallenwarrior.html</guid>
+        <link>http://localhost:4000/still/2012/10/12/fallenwarrior.html</link>
+        <guid isPermaLink="true">http://localhost:4000/still/2012/10/12/fallenwarrior.html</guid>
         
         
         <category>Still</category>
@@ -466,25 +466,8 @@
         <description>&lt;p&gt;&lt;img alt=&quot;Spirit_Vision&quot; src=&quot;/img/still/Syntactic-Rune-Evolution.jpg&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 06 May 2011 00:12:00 -0600</pubDate>
-        <link>http://suskitech.org/still/2011/05/06/evolution-of-the-runes.html</link>
-        <guid isPermaLink="true">http://suskitech.org/still/2011/05/06/evolution-of-the-runes.html</guid>
-        
-        
-        <category>Still</category>
-        
-    </item>
-    
-    
-    
-    <item>
-        <title>Suski Alphabet</title>
-        <description>&lt;style type=&quot;text/css&quot;&gt;
-    @font-face {
-        font-family: suskibet;
-        src: url('http://...</description>
-        <pubDate>Mon, 13 Dec 2010 23:36:00 -0700</pubDate>
-        <link>http://suskitech.org/still/2010/12/13/another-alphabet.html</link>
-        <guid isPermaLink="true">http://suskitech.org/still/2010/12/13/another-alphabet.html</guid>
+        <link>http://localhost:4000/still/2011/05/06/evolution-of-the-runes.html</link>
+        <guid isPermaLink="true">http://localhost:4000/still/2011/05/06/evolution-of-the-runes.html</guid>
         
         
         <category>Still</category>

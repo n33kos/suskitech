@@ -1,0 +1,105 @@
+<html>
+<head>
+	<title>Suskitech | Srcset Calculator</title>
+	<meta name="description" content="A srcset calculator which streamlines the integration of multiple image sources.">
+	<meta name="keywords" content="suski,suskitech,srcset,images,html5,css,calculator,sizes">
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/srcset.js"></script>
+	<link rel="stylesheet" href="css/bootstrap-margin-padding-classes.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Google Analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-35128335-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1 class="siteTitle"><a href="http://www.suskitech.org/" title="suskitech.org">Suskitech | Srcset Calculator</a></h1>
+		<div class="row margin-top-30">
+			<div class="text-center text-center margin-top-30 margin-bottom-30 col-md-8 col-md-offset-2 white">Calculate srcset sizes on the fly by entering in your dimensions and original scale. The app will update automatically with your values, and some example placeholder markup!</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<form class="row multi-columns-row">
+					<div class="col-sm-4">
+						<label for="originalWidth">
+							Original Width (px)
+						</label>
+						<input id="originalWidth" type="text" class="form-control" name="originalWidth" value="" placeholder="0">
+					</div>
+					<div class="col-sm-4">
+						<label for="originalHeight">
+							Original Height (px)
+						</label>
+						<input id="originalHeight" type="text" class="form-control" name="originalHeight" value="" placeholder="0">
+					</div>
+					<div class="col-sm-4">
+						<label for="originalScale">
+							Original Srcset Scale
+						</label>
+						<select id="originalScale" type="text" class="selectpicker form-control">
+							<option value="1">1x</option>
+							<option value="1.5">1.5x</option>
+							<option value="2">2x</option>
+							<option value="3">3x</option>
+							<option value="4">4x</option>
+						</select>
+					</div>
+				</form>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="results text-center row">
+					<div class="col-sm-6">
+						<h4 class="text-left">Results</h4>
+						<div class="alert alert-success x1">
+							<h3 class="margin-0">1x</h3>
+							<div>
+								<span class="width">0px</span>&nbsp;,&nbsp;<span class="height">0px</span>
+							</div>
+						</div>
+						<div class="alert alert-info x15">
+							<h3 class="margin-0">1.5x</h3>
+							<div>
+								<span class="width">0px</span>&nbsp;,&nbsp;<span class="height">0px</span>
+							</div>
+						</div>
+						<div class="alert alert-info x2">
+							<h3 class="margin-0">2x</h3>
+							<div>
+								<span class="width">0px</span>&nbsp;,&nbsp;<span class="height">0px</span>
+							</div>
+						</div>
+						<div class="alert alert-info x3">
+							<h3 class="margin-0">3x</h3>
+							<div>
+								<span class="width">0px</span>&nbsp;,&nbsp;<span class="height">0px</span>
+							</div>
+						</div>
+						<div class="alert alert-info x4">
+							<h3 class="margin-0">4x</h3>
+							<div>
+								<span class="width">0px</span>&nbsp;,&nbsp;<span class="height">0px</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 text-left">
+						<h4>Markup</h4>
+						<div class="exampleMarkup alert alert-warning"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
