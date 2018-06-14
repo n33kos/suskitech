@@ -1,0 +1,28 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+nav_display: true
+---
+<div id="blog-index-page" class="margin-top-25">
+  <h2 class="page-title visible-xs text-center">Blog</h2>
+  <div class="row margin-top-15">
+    <div class="col-xs-12">
+      {% for post in site.categories.Blog %}
+        <a class="blog-entry col-xs-12 animated slideInUp" href="{{post.url}}" title="{{post.title}}">
+          <div class="date">
+            {{post.date | date: "%b %d %Y" }}
+          </div>
+          <div class="content">
+            <div class="title">
+              {{post.title}}
+            </div>
+            <div class="excerpt">
+              {{post.excerpt}}
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

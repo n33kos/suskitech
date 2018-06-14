@@ -34,7 +34,7 @@ codepen_username: n33kos
 #---------BUILD SETTINGS---------------
 markdown: kramdown
 destination: ../suskitech_jekyll_portfolio_Rendered/
-highlighter: true
+highlighter: rouge
 
 #-----------GEMS--------------
 plugins: [mini_magick]

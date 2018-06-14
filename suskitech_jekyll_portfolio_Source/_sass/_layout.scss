@@ -59,12 +59,12 @@
     right: calc(50% - 60px);
     text-align: center;
     float: right;
-    
+
     @include breakpoint(sm) {
         text-align: right;
         right: 0;
     }
-    
+
     .icons {
         margin: auto;
         float: none;
@@ -155,13 +155,13 @@
         width: 100%;
         float: left;
         margin-top: 5px;
-        
+
         .lang {
             padding: 5px;
             display:inline-block;
             margin: 5px;
             font-size: 12px;
-            
+
             -moz-box-shadow: 0 1px 1px $drop-shadow-color;
             -webkit-box-shadow: 0 1px 1px $drop-shadow-color;
             box-shadow: 0 1px 1px $drop-shadow-color;
@@ -225,9 +225,9 @@
     }
     .coding_indicator.active:after {
         background: rgba(255,255,255,0.3);
-    }       
+    }
 }
-.flipOutBro{    
+.flipOutBro{
     -webkit-animation:  flipOutY 0.75s linear 0s alternate 1!important;
     -moz-animation:  flipOutY 0.75s linear 0s alternate 1!important;
     -o-animation:  flipOutY 0.75s linear 0s alternate 1!important;
@@ -254,11 +254,11 @@ nav {
         width:50px;
         height:40px;
         display:block;
-        
+
         @include breakpoint(sm) {
             display:none;
         }
-        
+
         #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
             cursor: pointer;
             border-radius: 1px;
@@ -273,7 +273,7 @@ nav {
           top: -10px;
         }
         #nav-toggle span:after {
-          bottom: -10px; 
+          bottom: -10px;
         }
         #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
           transition: all 500ms ease-in-out;
@@ -292,8 +292,8 @@ nav {
         #nav-toggle span:after {
           transform: rotate(-45deg);
         }
-    } 
-    
+    }
+
     #main-navigation {
         padding:0;
         margin:0;
@@ -313,7 +313,7 @@ nav {
                 text-decoration: none!important;
                 display: inline-block;
                 padding-bottom: 0px;
-                
+
                 .bar {
                     width: calc(100% + 60px);
                     height: 4px;
@@ -347,14 +347,14 @@ nav {
                     animation: initial;
                 }
             }
-            a:hover{                
+            a:hover{
                 .bar {
                     z-index: 2;
                 }
             }
         }
-        $colors: $teal, $blue, $salmon, $purple, $teal, $blue, $salmon, $purple, $teal;
-        @for $i from 1 through 6 {
+        $colors: $teal, $blue, $salmon, $purple, $teal, $blue, $salmon, $purple, $teal, $blue, $salmon, $purple, $teal;
+        @for $i from 1 through 9 {
             & li:nth-child(#{length($colors)}n+#{$i}) a {
                 &:hover .bar{
                 -webkit-animation: bar-in 0.5s ease 0s 1;
@@ -423,11 +423,11 @@ nav {
     .social {
         text-align: center;
         float: left;
-        
+
         @include breakpoint(sm) {
             text-align: left;
         }
-        
+
         .icons {
             margin: auto;
             float: none;

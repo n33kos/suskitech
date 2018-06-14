@@ -72,6 +72,12 @@
       
         
           
+            <li><a href="/blog/" title="Blog">Blog<span class="bar"></span></a></li>
+          
+        
+      
+        
+          
             <li><a href="/code/" title="Code" class="active">Code<span class="bar"></span></a></li>
           
         
@@ -160,7 +166,7 @@
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <div class="post">
-            <h5 class="post-title margin-bottom-5">Weapon Breeder</h5>
+            <h5 class="post-title margin-bottom-10">Weapon Breeder</h5>
             <p class="post-meta margin-0">Aug 29, 2015</p>
             <hr>
             <div class="post-content margin-top-5">
@@ -173,60 +179,61 @@ Seed values are all managed by their respective Type object. All values for all 
 
 You can easily add a new type by adding a new Type object to the $probability_cloud array.
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">$probability_cloud = generate_probability_cloud([
-    Type.new(&quot;daisies&quot;, {
-        :color =&gt; [&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;,&quot;white&quot;], #strings
-        :height =&gt; [1,4], #integer min/max range
-        :is_awesome =&gt; [true,false] #booleans
-    })
-])</code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="vg">$probability_cloud</span> <span class="o">=</span> <span class="n">generate_probability_cloud</span><span class="p">([</span>
+    <span class="no">Type</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"daisies"</span><span class="p">,</span> <span class="p">{</span>
+        <span class="ss">:color</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">"red"</span><span class="p">,</span><span class="s2">"blue"</span><span class="p">,</span><span class="s2">"green"</span><span class="p">,</span><span class="s2">"white"</span><span class="p">],</span> <span class="c1">#strings</span>
+        <span class="ss">:height</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="c1">#integer min/max range</span>
+        <span class="ss">:is_awesome</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="kp">true</span><span class="p">,</span><span class="kp">false</span><span class="p">]</span> <span class="c1">#booleans</span>
+    <span class="p">})</span>
+<span class="p">])</span></code></pre></figure>
 </div>
 <a href="https://github.com/n33kos/weaponbreeder" title="Weapon Breeder On GitHub" target="_blank" class="font-16 bold margin-bottom-15 underline">Weapon Breeder On GitHub</a>
 <div class="margin-bottom-15">
 	<h6>Example Output</h6>
-	<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">Generation 1
------------------
-is_mortal - true
-hit_points - 944
-entity_type - weapon
-size - huge
-elemental_type - air
-damage - 126.0
-sprite - mutated rock
-projectile - bomb
+	<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Generation</span> <span class="mi">1</span>
+<span class="o">-----------------</span>
+<span class="n">is_mortal</span> <span class="o">-</span> <span class="kp">true</span>
+<span class="n">hit_points</span> <span class="o">-</span> <span class="mi">944</span>
+<span class="n">entity_type</span> <span class="o">-</span> <span class="n">weapon</span>
+<span class="n">size</span> <span class="o">-</span> <span class="n">huge</span>
+<span class="n">elemental_type</span> <span class="o">-</span> <span class="n">air</span>
+<span class="n">damage</span> <span class="o">-</span> <span class="mf">126.0</span>
+<span class="n">sprite</span> <span class="o">-</span> <span class="n">mutated</span> <span class="n">rock</span>
+<span class="n">projectile</span> <span class="o">-</span> <span class="n">bomb</span>
 
-Generation 2
------------------
-is_mortal - true
-hit_points - 944
-entity_type - weapon
-size - huge
-elemental_type - air
-damage - 126.0
-sprite - mutated rock
-projectile - bomb
+<span class="no">Generation</span> <span class="mi">2</span>
+<span class="o">-----------------</span>
+<span class="n">is_mortal</span> <span class="o">-</span> <span class="kp">true</span>
+<span class="n">hit_points</span> <span class="o">-</span> <span class="mi">944</span>
+<span class="n">entity_type</span> <span class="o">-</span> <span class="n">weapon</span>
+<span class="n">size</span> <span class="o">-</span> <span class="n">huge</span>
+<span class="n">elemental_type</span> <span class="o">-</span> <span class="n">air</span>
+<span class="n">damage</span> <span class="o">-</span> <span class="mf">126.0</span>
+<span class="n">sprite</span> <span class="o">-</span> <span class="n">mutated</span> <span class="n">rock</span>
+<span class="n">projectile</span> <span class="o">-</span> <span class="n">bomb</span>
 
-Generation 3
------------------
-is_mortal - true
-hit_points - 944
-entity_type - weapon
-size - huge
-elemental_type - air
-damage - 327
-sprite - mutated zombie
-projectile - bomb
+<span class="no">Generation</span> <span class="mi">3</span>
+<span class="o">-----------------</span>
+<span class="n">is_mortal</span> <span class="o">-</span> <span class="kp">true</span>
+<span class="n">hit_points</span> <span class="o">-</span> <span class="mi">944</span>
+<span class="n">entity_type</span> <span class="o">-</span> <span class="n">weapon</span>
+<span class="n">size</span> <span class="o">-</span> <span class="n">huge</span>
+<span class="n">elemental_type</span> <span class="o">-</span> <span class="n">air</span>
+<span class="n">damage</span> <span class="o">-</span> <span class="mi">327</span>
+<span class="n">sprite</span> <span class="o">-</span> <span class="n">mutated</span> <span class="n">zombie</span>
+<span class="n">projectile</span> <span class="o">-</span> <span class="n">bomb</span>
 
-Generation 4
------------------
-is_mortal - true
-hit_points - 944
-entity_type - object
-size - huge
-elemental_type - air
-damage - 327
-sprite - mutated zombie
-projectile - beam</code></pre></figure>
+<span class="no">Generation</span> <span class="mi">4</span>
+<span class="o">-----------------</span>
+<span class="n">is_mortal</span> <span class="o">-</span> <span class="kp">true</span>
+<span class="n">hit_points</span> <span class="o">-</span> <span class="mi">944</span>
+<span class="n">entity_type</span> <span class="o">-</span> <span class="n">object</span>
+<span class="n">size</span> <span class="o">-</span> <span class="n">huge</span>
+<span class="n">elemental_type</span> <span class="o">-</span> <span class="n">air</span>
+<span class="n">damage</span> <span class="o">-</span> <span class="mi">327</span>
+<span class="n">sprite</span> <span class="o">-</span> <span class="n">mutated</span> <span class="n">zombie</span>
+<span class="n">projectile</span> <span class="o">-</span> <span class="n">beam</span>
+	</code></pre></figure>
 </div>
 
             </div>
@@ -235,6 +242,7 @@ projectile - beam</code></pre></figure>
     </div>
   </div>
 </div>
+
       <footer class="footer">
     <div class="bar"></div>
     <div class="row">

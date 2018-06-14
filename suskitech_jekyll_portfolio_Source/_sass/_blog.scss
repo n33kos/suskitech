@@ -1,0 +1,61 @@
+#blog-index-page {
+	.blog-entry {
+		color: black;
+		display: flex;
+		padding: 15px 0;
+		text-decoration: none;
+
+		.date {
+			display: inline-block;
+			flex-shrink: 0;
+			font-size: 12px;
+			position: relative;
+			text-transform: uppercase;
+
+			&:after {
+				background-color: black;
+				content: '';
+				display: block;
+				height: 100%;
+				left: calc(50% - 3px);
+				position: absolute;
+				top: 20px;
+				width: 6px;
+			}
+
+		}
+
+		.content {
+			display: inline-block;
+			padding-left: 35px;
+			font-family: 'Merriweather', serif;
+		}
+
+		.title {
+			font-size: 20px;
+			letter-spacing: 1px;
+			line-height: 1;
+			margin-bottom: 15px;
+		}
+
+		.excerpt {
+			font-family: 'Merriweather', serif;
+		}
+
+		$colors: $teal, $blue, $salmon, $purple, $teal, $blue, $salmon, $purple;
+		@for $i from 1 through 4 {
+			&:nth-child(#{$i}n) {
+				.date:after {
+					background: nth($colors, $i); /* Old browsers */
+					background: -moz-linear-gradient(bottom, nth($colors, $i) 0%,  nth($colors, $i+1) 100%); /* FF3.6-15 */
+					background: -webkit-linear-gradient(bottom, nth($colors, $i) 0%,  nth($colors, $i+1) 100%); /* Chrome10-25,Safari5.1-6 */
+					background: linear-gradient(to bottom, nth($colors, $i) 0%,  nth($colors, $i+1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				}
+
+				.date {
+					color: nth($colors, $i);
+				}
+			}
+		}
+	}
+}
