@@ -2,6 +2,21 @@
 layout: page
 ---
 <div class="row margin-top-15" class="margin-top-25">
+  <div id="code-index-page" class="col-xs-12 col-md-5">
+    <h2 class="page-title visible-xs text-center">Code</h2>
+    <div class="row multi-columns-row">
+      {% for post in site.categories.Code %}
+      <div class="col-xsxs-12 col-xs-6 padding-top-30 padding-bottom-30">
+        <a href="{{post.url}}" title="{{post.title}}">
+          <span class="code-entry block shadow-5 animated slideInUp" style="background-image:url('{{post.thumb_image}}');">
+            <span class="block font-12 filedate grey">{{post.date | date: "%a, %b %d %Y" }}</span>
+            <span class="block font-16 filename grey">{{post.title | replace:' ','_'}}</span>
+          </span>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
   <div id="blog-index-page" class="col-xs-12 col-md-7">
     <h2 class="page-title visible-xs text-center">Blog</h2>
     <div class="row margin-top-15">
@@ -22,21 +37,6 @@ layout: page
           </a>
         {% endfor %}
       </div>
-    </div>
-  </div>
-  <div id="code-index-page" class="col-xs-12 col-md-5">
-    <h2 class="page-title visible-xs text-center">Code</h2>
-    <div class="row multi-columns-row">
-      {% for post in site.categories.Code %}
-        <div class="col-xsxs-12 col-xs-6 padding-top-30 padding-bottom-30">
-          <a href="{{post.url}}" title="{{post.title}}">
-            <span class="code-entry block shadow-5 animated slideInUp" style="background-image:url('{{post.thumb_image}}');">
-              <span class="block font-12 filedate grey">{{post.date | date: "%a, %b %d %Y" }}</span>
-              <span class="block font-16 filename grey">{{post.title | replace:' ','_'}}</span>
-            </span>
-          </a>
-        </div>
-      {% endfor %}
     </div>
   </div>
 </div>

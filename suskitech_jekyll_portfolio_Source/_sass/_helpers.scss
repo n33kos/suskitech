@@ -150,8 +150,8 @@
   position: relative;
 }
 .vignette:after {
- -moz-box-shadow: inset 0 0 10em #666;  
- -webkit-box-shadow: inset 0 0 10em #666;   
+ -moz-box-shadow: inset 0 0 10em #666;
+ -webkit-box-shadow: inset 0 0 10em #666;
  box-shadow: inset 0 0 10em #666;
  position: absolute;
  top: 0;
@@ -176,6 +176,10 @@
 
 .block {
     display: block;
+}
+
+.inline {
+    display: inline;
 }
 
 .underline {

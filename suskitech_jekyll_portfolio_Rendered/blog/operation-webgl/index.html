@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Creations | Suskitech.Org</title>
-	<meta name="description" content="">
+	<meta name="description" content="One thing I've come to know about myself is that I learn best by doing. As such I will be documenting the process of learning WebGL from the roots to the lea...">
 	<meta name="keywords" content="suski,suskitech,suski technical services,nicholas,code,web,web developer,art,music,jewelry">
 
 	<!-- jQuery -->
@@ -29,7 +29,7 @@
 	<link rel="stylesheet" href="/css/main.css">
 
 	<!-- Canonicals -->
-	<!-- <link rel="canonical" href="http://suskitech.org/video/2013/01/19/vanished-promo-video.html"> -->
+	<!-- <link rel="canonical" href="http://suskitech.org/blog/operation-webgl/"> -->
 	<link rel="alternate" type="application/rss+xml" title="Creations | Suskitech.Org" href="http://suskitech.org/feed.xml" />
 
 	<!-- Slick Gallery -->
@@ -72,7 +72,7 @@
       
         
           
-            <li><a href="/blog/" title="Blog">Blog<span class="bar"></span></a></li>
+            <li><a href="/blog/" title="Blog" class="active">Blog<span class="bar"></span></a></li>
           
         
       
@@ -114,7 +114,7 @@
       
         
           
-            <li><a href="/video/" title="Video" class="active">Video<span class="bar"></span></a></li>
+            <li><a href="/video/" title="Video">Video<span class="bar"></span></a></li>
           
         
       
@@ -166,11 +166,88 @@
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <div class="post">
-            <h5 class="post-title margin-bottom-10">Vanished Promo Video</h5>
-            <p class="post-meta margin-0">Jan 19, 2013</p>
+            <h5 class="post-title margin-bottom-10">Operation, WebGL</h5>
+            <p class="post-meta margin-0">Jun 14, 2018</p>
             <hr>
             <div class="post-content margin-top-5">
-              
+              <div>
+  <p>
+    One thing I've come to know about myself is that I learn best by doing. As such I will be documenting the process of learning WebGL from the roots to the leaves. I’ve set myself a curriculum to follow which begins with WebGL basics but also includes brush-up courses in trigonometry and linear algebra.
+  </p>
+
+  <p>
+    Of course no good technical blog post is complete without interactive examples so I will also be building a WebGL toolkit to abstract each function after I've learned them. In doing so I hope to end up with a useful library and documentation on the things I’ve learned to look back on later.
+  </p>
+
+  <p>
+    To begin I've written a single class <code class="inline">WebglToolkit.Canvas</code> which takes parameters for <b>element</b>, <b>height</b>, <b>width</b>, and <b>color</b> then initializes a canvas in the <code>webgl</code> context.
+
+    <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="cm">/**
+     * A class for initializing a canvas in webGL context
+     * @class Canvas
+     * @param {Object} config - configuration object
+     * @param {string} config.element - The id of the canvas element to initialize
+     * @param {number} config.height - The height of the canvas element
+     * @param {number} config.width - The width of the canvas element
+     * @param {array}  config.color - The initial background color [r, g, b, a]
+     */</span>
+
+    <span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="p">{</span>
+      <span class="kd">constructor</span><span class="p">({</span>
+        <span class="nx">element</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nx">height</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nx">width</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nx">color</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>
+      <span class="p">})</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">element</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Please pass a canvas element to initialize'</span><span class="p">);</span>
+          <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kd">const</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
+
+        <span class="k">try</span> <span class="p">{</span>
+          <span class="k">this</span><span class="p">.</span><span class="nx">context</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">'webgl'</span><span class="p">);</span>
+          <span class="k">this</span><span class="p">.</span><span class="nx">setElementDimensions</span><span class="p">(</span><span class="nx">canvas</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="nx">width</span><span class="p">);</span>
+          <span class="k">this</span><span class="p">.</span><span class="nx">setContextDimensions</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">context</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="nx">width</span><span class="p">);</span>
+          <span class="k">this</span><span class="p">.</span><span class="nx">setCanvasBackground</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">context</span><span class="p">,</span> <span class="nx">color</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Could Not Initialize WebGL'</span><span class="p">);</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+
+      <span class="nx">setElementDimensions</span><span class="p">(</span><span class="nx">canvas</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="nx">width</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">canvas</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'width'</span><span class="p">,</span> <span class="nx">width</span><span class="p">);</span>
+        <span class="nx">canvas</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'height'</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="nx">setContextDimensions</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="nx">width</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">context</span><span class="p">.</span><span class="nx">viewportWidth</span> <span class="o">=</span> <span class="nx">height</span><span class="p">;</span>
+        <span class="nx">context</span><span class="p">.</span><span class="nx">viewportHeight</span> <span class="o">=</span> <span class="nx">width</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="nx">setCanvasBackground</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">context</span><span class="p">.</span><span class="nx">clearColor</span><span class="p">(...</span><span class="nx">color</span><span class="p">);</span>
+        <span class="nx">context</span><span class="p">.</span><span class="nx">clear</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">COLOR_BUFFER_BIT</span><span class="o">|</span><span class="nx">context</span><span class="p">.</span><span class="nx">DEPTH_BUFFER_BIT</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    </code></pre></figure>
+  </p>
+
+  <p>
+    I considered using a pre-existing library like trusty old <a href="https://threejs.org/" target="_blank" rel="noopener noreferrer">three.js</a> for my examples but decided against it in the interest of truly understanding the inner working if WebGL. My first step was to create a repository and set it up in a modular fashion to allow for growth. I expect a shift in architecture as I implement more challenging features so for now I'm importing classes and making them available under the oh so creative name <code class="inline">WebglToolkit</code>
+  </p>
+
+  <p>
+    I've set up the project using <a href="https://babeljs.io/" target="_blank" rel="noopener noreferrer">babel</a> and <a href="https://webpack.js.org/">webpack</a> (if you aren’t using ES6 you should look into Babel right away. There’s no reason you shouldn’t be experiencing the joy of fat arrow functions and destructuring, you deserve it!) Babel does a great job of converting your shiny new javascript syntax into plain old JavaScript which should work everywhere. I also set up <a href="https://www.npmjs.com/package/jsdoc-to-markdown" target="_blank" rel="noopener noreferrer">jsdoc-to-markdown</a>, a nice auto-documentation package which generates README files from doc blocks in the code. Last, I’ve created an examples folder which I can use for testing each feature as I develop or alter them.
+  </p>
+
+  <p>
+    You can check out the repository here <a href="https://github.com/n33kos/WebglToolkit/tree/master/examples" target="_blank" rel="noopener noreferrer">WebglToolkit</a>
+  </p>
+</div>
+
             </div>
         </div>
       </div>
