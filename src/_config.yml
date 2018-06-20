@@ -33,7 +33,7 @@ codepen_username: n33kos
 
 #---------BUILD SETTINGS---------------
 markdown: kramdown
-destination: ../suskitech_jekyll_portfolio_Rendered/
+destination: ../dist/
 highlighter: rouge
 
 #-----------GEMS--------------
