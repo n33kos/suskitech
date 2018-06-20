@@ -1093,9 +1093,9 @@ nav {
   #photography-index-page .album .thumb:nth-child(1) .polaroid, #gallery-page .album .thumb:nth-child(1) .polaroid {
     top: 15px;
     left: 15px;
-    -webkit-transform: rotate(-1deg);
-    -ms-transform: rotate(-1deg);
-    transform: rotate(-1deg);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
     -moz-animation: splayImages-1 1s ease-out 0s alternate 1;
     -webkit-animation: splayImages-1 1s ease-out 0s alternate 1;
     animation: splayImages-1 1s ease-out 0s alternate 1; }
@@ -1109,15 +1109,15 @@ nav {
   100% {
     top: 15px;
     left: 15px;
-    -webkit-transform: rotate(-1deg);
-    -ms-transform: rotate(-1deg);
-    transform: rotate(-1deg); } }
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); } }
   #photography-index-page .album .thumb:nth-child(2) .polaroid, #gallery-page .album .thumb:nth-child(2) .polaroid {
     top: 30px;
     left: 30px;
-    -webkit-transform: rotate(-1deg);
-    -ms-transform: rotate(-1deg);
-    transform: rotate(-1deg);
+    -webkit-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
     -moz-animation: splayImages-2 1s ease-out 0s alternate 1;
     -webkit-animation: splayImages-2 1s ease-out 0s alternate 1;
     animation: splayImages-2 1s ease-out 0s alternate 1; }
@@ -1131,15 +1131,15 @@ nav {
   100% {
     top: 30px;
     left: 30px;
-    -webkit-transform: rotate(-1deg);
-    -ms-transform: rotate(-1deg);
-    transform: rotate(-1deg); } }
+    -webkit-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg); } }
   #photography-index-page .album .thumb:nth-child(3) .polaroid, #gallery-page .album .thumb:nth-child(3) .polaroid {
     top: 45px;
     left: 45px;
-    -webkit-transform: rotate(4deg);
-    -ms-transform: rotate(4deg);
-    transform: rotate(4deg);
+    -webkit-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg);
     -moz-animation: splayImages-3 1s ease-out 0s alternate 1;
     -webkit-animation: splayImages-3 1s ease-out 0s alternate 1;
     animation: splayImages-3 1s ease-out 0s alternate 1; }
@@ -1153,9 +1153,9 @@ nav {
   100% {
     top: 45px;
     left: 45px;
-    -webkit-transform: rotate(4deg);
-    -ms-transform: rotate(4deg);
-    transform: rotate(4deg); } }
+    -webkit-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg); } }
   #photography-index-page .album .thumb:nth-child(4) .polaroid, #gallery-page .album .thumb:nth-child(4) .polaroid {
     top: 60px;
     left: 60px;
