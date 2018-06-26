@@ -1,0 +1,106 @@
+---
+layout: post
+title: "Trigonometric Ratios"
+date: 2018-06-25 00:00
+author: n33kos
+category: Blog
+permalink: /blog/trigonometric-ratios/
+excerpt: "In this post I will go over the trigonometric ratios in right triangles and how to use those ratios to solve a right triangle."
+---
+<div>
+  <p>
+    In this post I will go over the trigonometric ratios in right triangles and how to use those ratios to solve for a side. Because a right triangle has one angle at 90° and two more acute angles, the side directly across from the 90° angle is always the longest. The long side is called the <code class="inline">hypotenuse</code>. We also have names for the other two sides but they are relative to each of the remaining acute angles. These sides are called <code class="inline">adjacent</code> and <code class="inline">opposite</code>. The adjacent side is the one which is touching (or adjacent to) the acute angle. The opposite side is the one directly across from the acute angle.
+  </p>
+
+  <p>
+    Let’s look at an example, you can see below that <b>&ang;C</b> is our 90° angle so the hypotenuse is <span class="overline bold">AB</span>. If we click <b>&ang;A</b> we see that the adjacent side is <span class="overline bold">AC</span>, while the opposite is side <span class="overline bold">BC</span>. Now if we click <b>&ang;B</b> we see that the opposite and adjacent sides have swapped but the hypotenuse never stops being the hypotenuse.
+  </p>
+
+  <p>
+    <div class="codepen-embed">
+      <p data-height="400" data-slug-hash="aKjoZK" data-default-tab="result" data-user="n33kos" data-embed-version="2" class="codepen"></p>
+      <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    </div>
+  </p>
+
+  <p>
+    Great so now we know what the sides are called, what next? We can use the names to define the trigonometric ratios. There are three ratios for calculating the length of the sides on a right triangle. <code class="inline">sine</code>, <code class="inline">cosine</code>, and <code class="inline">tangent</code>. There’s a great pneumonic we can use to remember these ratios &ldquo;<strong>SOH</strong> <strong>CAH</strong> <strong>TOA</strong>&rdquo;. Remember, each ratio is relative to one of the acute angles in the triangle.
+{% highlight python %}
+S      O          H
+Sine = Opposite / Hypotenuse
+
+C        A          H
+Cosine = Adjacent / Hypotenuse
+
+T         O          A
+Tangent = Opposite / Adjacent
+{% endhighlight %}
+  </p>
+
+  <p>
+    Now let’s use these ratios to solve for a side in a right triangle. If we know the length of two sides we can use the pythagorean theorem to figure out the length of the last one. But what if we only know the length of one side and the angle of one vertex? Because our trigonometric ratios are relative to a single angle we can solve all of the angles and side lengths with this limited information.
+  </p>
+
+  <p>
+    In the right triangle below we are given the value of <b>&ang;B</b> and the length of the hypotenuse, let's solve the hypotenuse:
+  </p>
+
+  <ol>
+    <li>
+      Determine which ratio we need to use. Because we know <span class="overline bold">BC</span> we want to use cosine as it includes both of our known values.
+    </li>
+    <li>
+      Substitute the known values.
+    </li>
+    <li>
+      Multiply both sides by <span class="overline bold">AB</span>.
+    </li>
+    <li>
+      Divide both sides by the cosine of ∠B.
+    </li>
+    <li>
+      Evaluate to determine <span class="overline bold">AB</span>.
+    </li>
+  </ol>
+
+  <p>
+    Then feel free to change the values of <span class="overline bold">BC</span> and ∠B to see how it changes the triangle. This example isn't 100% accurate but it works as a visual aid.
+  </p>
+
+  <p>
+    <div class="codepen-embed">
+      <p data-height="400" data-slug-hash="pKOoXG" data-default-tab="result" data-user="n33kos" data-embed-version="2" class="codepen"></p>
+      <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    </div>
+  </p>
+
+  <p>
+    Now if we want to solve the opposite we could use sine with the hypotenuse but let's use the tangent. It better displays the ability to solve both sides with only one angle and one side:
+  </p>
+
+  <p>
+    <div class="codepen-embed">
+      <p data-height="400" data-slug-hash="zaJrQZ" data-default-tab="result" data-user="n33kos" data-embed-version="2" class="codepen"></p>
+      <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    </div>
+  </p>
+
+  <p>
+    Congrats, now you know what the sides of a right triangle are named and how to use them in the trigonometric ratios. We also know a jazzy pneumonic to remember the ratios &ldquo;<strong>SOH</strong> <strong>CAH</strong> <strong>TOA</strong>&rdquo;. Go forth and solve all the sides!
+  </p>
+
+  <img class="block center" src="/img/blog/solveallthesides.jpg" width="200px">
+
+  <p>
+    <i>Fun Note:</i> When I first attempted to use JavaScript to evaluate these ratios my numbers came out all wonky. After a little research I discovered that <code class="inline">Math.sin(), Math.cos(), and Math.tan()</code> expect an argument in radians not degrees. As such, some of the first mathematical functions I’ve added to NEWT convert between radians and degrees:
+
+{% highlight javascript %}
+radToDeg (radians) => radians * 180 / Math.PI;
+degToRad (degrees) => degrees * Math.PI / 180;
+{% endhighlight %}
+  </p>
+
+  <p>
+    <i>Afterward:</i> Last time I gave you a rundown of my path toward WebGL specialization. Since then I’ve made quite a lot of changes to my WebGL toolkit and have decided to name it <a href="https://github.com/n33kos/NEWT" target="_blank" rel="noopener noreferrer">NEWT</a>. In truth this is largely because I got tired of prefixing every class and function call with <code class="inline">WebglToolkit</code>. The new name is an acronym for "Nick's Efficient WebGL Toolkit". While I’m not completely sold on the meaning of the acronym, newts are neat little creatures and 'NEWT' has a certain Harry Potter nostalgia which clicked for me. Most importantly the new name is only four characters which is much less tedious to type than twelve. You may notice that I used the 2D context to create my example for this post. NEWT really isn't ready to be used for this sort of thing so I fell back to my old jQuery / canvas2D codepen template.
+  </p>
+</div>
