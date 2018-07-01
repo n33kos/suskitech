@@ -17,7 +17,7 @@ jQuery(document).ready(function ($) {
     var leftoffset;
     var fadecounter;
     var fadelimit=5;
-	
+
 	//------------------------------FUNCTIONS------------------------------
 
     function OnLoad() {
@@ -55,9 +55,9 @@ jQuery(document).ready(function ($) {
     function ChangeWord() {
         if(!ispaused){
             if(punctuationcounter <= 0){
-            
+
                 if(textarray[wordspace].toLowerCase().indexOf(".") >= 0 || textarray[wordspace].toLowerCase().indexOf("?") >= 0 || textarray[wordspace].toLowerCase().indexOf(",") >= 0 || textarray[wordspace].toLowerCase().indexOf(";") >= 0 || textarray[wordspace].toLowerCase().indexOf("!") >= 0 || textarray[wordspace].toLowerCase().indexOf('"') >= 0){
-                    punctuationcounter++; 
+                    punctuationcounter++;
                 }
 
                 var wordlength = 0;
@@ -66,7 +66,7 @@ jQuery(document).ready(function ($) {
                 var oldletter = textarray[wordspace].substring(perfectspot + 1, perfectspot);
                 var finalval = replaceAt(textarray[wordspace], perfectspot, '<span style="color:'+lettercolor+';">' + oldletter + '</span>');
                 $('#wordbox').html(finalval);
-        
+
                 var wordwidth = $( '#wordbox' ).width();
                 switch(wordlength){
                     case 1:
@@ -147,7 +147,7 @@ jQuery(document).ready(function ($) {
         }
     }
 
-    function CollectData() {		    	
+    function CollectData() {
         textstring = $('#textPlace').val();
         textarray = textstring.replace(/\s{2,}/g, ' ').split(' ');
 	    return textarray, wpm, wpmMS;

@@ -1,0 +1,53 @@
+.pico-8-cart {
+  margin: 0 auto 75px;
+  max-height: 600px;
+  max-width: 600px;
+
+  canvas#canvas {
+    width: 100%;
+    height: 100%;
+  }
+
+  .pico8_controls {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .pico8_el {
+    width:92px;
+    display:inline-block;
+    margin: 1px;
+    padding: 4px;
+    text-align: center;
+    color:#fff;
+    background-color:#777;
+    font-family : verdana;
+    font-size: 9pt;
+    cursor: pointer;
+    cursor: hand;
+  }
+
+  .pico8_el a{
+    text-decoration: none;
+    color:#fff;
+  }
+
+  .pico8_el:hover{
+    background-color:#aaa;
+  }
+
+  .pico8_el:link{
+    background-color:#aaa;
+  }
+
+  canvas{
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+    border: 0px
+  }
+}

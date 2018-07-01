@@ -7,6 +7,7 @@ source 'https://rubygems.org' do
 end
 
 group :jekyll_plugins do
+  gem "autoprefixer-rails"
   gem "octopress-autoprefixer"
   gem "jekyll-babel"
 end

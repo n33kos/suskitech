@@ -31,10 +31,10 @@
 			</fieldset>
 			<fieldset class="sm">
 				<label>Helpers:</label>
-				<ul class="helpers"> 
-					<li><input type="radio" name="helpers" value="on" checked /><label>On</label></li> 
-					<li><input type="radio" name="helpers" value="off" /><label>Off</label></li> 
-				</ul> 
+				<ul class="helpers">
+					<li><input type="radio" name="helpers" value="on" checked /><label>On</label></li>
+					<li><input type="radio" name="helpers" value="off" /><label>Off</label></li>
+				</ul>
 			</fieldset>
 			<fieldset class="sm">
 				<label>Color:</label>

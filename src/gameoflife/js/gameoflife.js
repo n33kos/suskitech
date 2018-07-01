@@ -1,7 +1,10 @@
+---
+---
+
 jQuery(document).ready(function(){
 
 	//var decs
-	var 
+	var
 	isStarted = false,
 	updateInterval = 50,
 	CellDensity = 100,
@@ -245,7 +248,7 @@ jQuery(document).ready(function(){
 	}
 
 	//setInterval for Update
-	var myVar=setInterval(function () { 
+	var myVar=setInterval(function () {
 		//Are we paused?
 		if(!window.isStarted){return;}
 		Update();
@@ -254,10 +257,10 @@ jQuery(document).ready(function(){
 
 	//Update function
 	function Update() {
-			
+
 		for(var i=0;i<CellDensity*CellDensity;i++){
 
-			var 
+			var
 			nextColor,
 			prevColor,
 			parentColor,
@@ -272,7 +275,7 @@ jQuery(document).ready(function(){
 			//Get prev/next pixel
 			if(i+1 <= CellDensity*CellDensity)var nextRGB = colorArray[i+1];
 			if(i-1 >= 0)var prevRGB = colorArray[i-1];
-			
+
 			//Get parent/child pixel
 			if(i+parentChildOffset <= CellDensity*CellDensity)var parentRGB = colorArray[i+parentChildOffset];
 			if(i-parentChildOffset >= 0)var childRGB = colorArray[i-parentChildOffset];
@@ -300,7 +303,7 @@ jQuery(document).ready(function(){
 			if(oldRGB[0] <= 35)greenIncrement -= negativeInfluenceDecrement;
 			if(oldRGB[1] <= 35)blueIncrement -= negativeInfluenceDecrement;
 			if(oldRGB[2] <= 35)redIncrement -= negativeInfluenceDecrement;
-			
+
 			//Clamp color values and cycle pixel values if desired.
 			if(cyclicalEnergy){
 				if(!cyclicalEnergyDirection){
@@ -312,7 +315,7 @@ jQuery(document).ready(function(){
 					var g = parseInt(oldRGB[1]) <= 254 ? oldRGB[1]+(greenIncrement/10) : 0;
 					var b = parseInt(oldRGB[2]) <= 254 ? oldRGB[2]+(blueIncrement/10) : 0;
 				}
-			}else{				
+			}else{
 				var r = parseInt(oldRGB[0]) <= 254 ? oldRGB[0]+(redIncrement/10) : 255;
 				var g = parseInt(oldRGB[1]) <= 254 ? oldRGB[1]+(greenIncrement/10) : 255;
 				var b = parseInt(oldRGB[2]) <= 254 ? oldRGB[2]+(blueIncrement/10) : 255;
@@ -327,7 +330,7 @@ jQuery(document).ready(function(){
 			}else if(rando > (diseasePercentage*2) && rando < (diseasePercentage*3)){
 				if(nextRGB && prevRGB && parentRGB && childRGB)b = (nextRGB[2] + prevRGB[2] + parentRGB[2] + childRGB[2])/4;
 			}
-			
+
 			//Sun Beams Cause Mutations Bruh
 			if(rando < mutationPercentage){
 				var rOLD = r;

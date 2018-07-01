@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Creations | Suskitech.Org</title>
-	<meta name="description" content="			Underwatch is an objective based team shooter demake coded in Lua. The objective is to capture the control point (marked in orange) by ensuring that only ...">
+	<meta name="description" content="			{% include pico8.html file="/js/pico8/underwatch.js" %}							Controls							z: Primary Ability				x: Secondary Ability				Up: Jump				Left: Move Left				...">
 	<meta name="keywords" content="suski,suskitech,suski technical services,nicholas,code,web,web developer,art,music,jewelry">
 
 	<!-- jQuery -->
@@ -80,6 +80,8 @@
           
             <li><a href="/code/" title="Code" class="active">Code<span class="bar"></span></a></li>
           
+        
+      
         
       
         
@@ -171,26 +173,83 @@
             <hr>
             <div class="post-content margin-top-5">
               <div class="margin-bottom-15">
+	<div class="pico-8-cart">
+		<center>
+  <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+
+  <script type="text/javascript">
+    var canvas = document.getElementById("canvas");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    var Module = {};
+    Module.canvas = canvas;
+  </script>
+
+  <script async type="text/javascript" src="/js/pico8/underwatch.js"></script>
+
+  <script>
+    function onKeyDown_blocker(event) {
+      event = event || window.event;
+      var o = document.activeElement;
+      if (!o || o == document.body || o.tagName == "canvas")
+      {
+        if ([32, 37, 38, 39, 40].indexOf(event.keyCode) > -1)
+        {
+          if (event.preventDefault) event.preventDefault();
+        }
+      }
+    }
+    document.addEventListener('keydown', onKeyDown_blocker, false);
+  </script>
+
+  <div class="pico8_controls">
+    <div class=pico8_el onclick="Module.pico8Reset();">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAaklEQVR4Ae2dOwoAMQhE15A+rfc/3bZ7AlMnQfywCkKsfcgMM9ZP+QHtIn0vLeBAFduiFdQ/0DmvtR5LXJ6CPSXe2ZXcFNlTxFbemKrbZPs35XogeS9xeQr+anT6LzoOwEDwZJ7jwhXUnwkTTiDQ2Ja34AAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="Reset" width=12 height=	12/>
+      Reset
+    </div>
+
+    <div class=pico8_el onclick="Module.pico8TogglePaused();">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAPUlEQVR4Ae3doQ0AIAxEUWABLPtPh2WCq26DwFSU/JPNT166QSu/Hg86W9dwLte+diP7AwAAAAAAgD+A+jM2ZAgo84I0PgAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="Pause" width=12 height=12/>
+      Pause
+    </div>
+
+    <div class=pico8_el onclick="Module.requestFullScreen(true, false);">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAaklEQVR4Ae2dsQ1AIQhExfze1v2ns3UCrfgFhmgUUAoGgHscp21wX9BqaZoDojbB96OkDJKNcTN2BHTyYNYmoT2BlPL7BKgcPfHjAVXKKadkHOn9K1r16N0czN6a95N8mnA7Aq2fTZ3Af3UKmCSMazL8HwAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="Fullscreen" width=12 height=12/>
+      Fullscreen
+    </div>
+
+    <div class=pico8_el onclick="Module.pico8ToggleSound();">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAXklEQVR4Ae2doQ4AIQxD4YLH8v9fh+ULhjpxxSwLg2uyapr1JRu1iV5Z+1BGl4+xNpX38SYo2uRvYiT5LwEmt+ocgXVLrhPEgBiw8Q5w7/kueSkK+D2tJO4E/I3GrwkqQCBabEj/4QAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="Toggle Sound" width=12 height=12/>
+      Sound
+    </div>
+  </div>
+</center>
+
+	</div>
+
+	<div class="row">
+		<div class="col-sm-5 col-sm-offset-1">
+			<b>Controls</b>
+			<ul>
+				<li>z: Primary Ability</li>
+				<li>x: Secondary Ability</li>
+				<li>Up: Jump</li>
+				<li>Left: Move Left</li>
+				<li>Right: Move Right</li>
+			</ul>
+		</div>
+		<a class="col-sm-5 text-center" href="http://www.lexaloffle.com/bbs/?tid=3849" title="Play Now!">
+			<img src="http://www.lexaloffle.com/bbs/cposts/2/25428.p8.png">
+		</a>
+	</div>
+
 	<div class="margin-bottom-15">
 		<p>Underwatch is an objective based team shooter demake coded in Lua. The objective is to capture the control point (marked in orange) by ensuring that only your teammates are occupying the area.
 		You must eliminate your enemies and raise your team's capture meter to 100% before the other team does!
 		</p>
-		<br>
 		<a href="https://github.com/n33kos/underwatch" title="Underwatch On GitHub" target="_blank" class="font-16 bold margin-bottom-15 underline">Underwatch On GitHub</a>
-		<br>
-		<br>
-		<a href="http://www.lexaloffle.com/bbs/?tid=3849" title="Play Now!">
-			<img src="http://www.lexaloffle.com/bbs/cposts/2/25428.p8.png">
-			<br>Play Now!
-		</a>
-		<br><br>
-		<iframe src="http://player.vimeo.com/video/177183239" width="600" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		<br>
 	</div>
 </div>
-
-
-<p>Any resemblance to existing copyrighted material is coincidental and unintentional.</p>
 
             </div>
         </div>

@@ -9,13 +9,13 @@ jQuery(document).ready(function(){
 	});
 
 	function calculateSrcSet(og_scale,og_width,og_height){
-		sets = 
+		sets =
 		[[ og_width * 1, og_height * 1 ],
 		[ og_width * 1.5, og_height * 1.5],
 		[ og_width * 2, og_height * 2],
 		[ og_width * 3, og_height * 3],
 		[ og_width * 4, og_height * 4]];
-		
+
 		for (var i = 0; i < sets.length; i++) {
 			sets[i][0] = Math.floor(sets[i][0]);
 			sets[i][1] = Math.floor(sets[i][1]);
