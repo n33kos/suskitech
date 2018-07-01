@@ -168,6 +168,13 @@ p {
 .post .center {
   margin: 0 auto; }
 
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px; }
+  .post-navigation a:hover {
+    text-decoration: underline; }
+
 .grey-light {
   color: #aaa; }
 
@@ -1151,9 +1158,9 @@ nav {
   #photography-index-page .album .thumb:nth-child(3) .polaroid, #gallery-page .album .thumb:nth-child(3) .polaroid {
     top: 45px;
     left: 45px;
-    -webkit-transform: rotate(4deg);
-    -ms-transform: rotate(4deg);
-    transform: rotate(4deg);
+    -webkit-transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    transform: rotate(7deg);
     -moz-animation: splayImages-3 1s ease-out 0s alternate 1;
     -webkit-animation: splayImages-3 1s ease-out 0s alternate 1;
     animation: splayImages-3 1s ease-out 0s alternate 1; }
@@ -1167,15 +1174,15 @@ nav {
   100% {
     top: 45px;
     left: 45px;
-    -webkit-transform: rotate(4deg);
-    -ms-transform: rotate(4deg);
-    transform: rotate(4deg); } }
+    -webkit-transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    transform: rotate(7deg); } }
   #photography-index-page .album .thumb:nth-child(4) .polaroid, #gallery-page .album .thumb:nth-child(4) .polaroid {
     top: 60px;
     left: 60px;
-    -webkit-transform: rotate(3deg);
-    -ms-transform: rotate(3deg);
-    transform: rotate(3deg);
+    -webkit-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
     -moz-animation: splayImages-4 1s ease-out 0s alternate 1;
     -webkit-animation: splayImages-4 1s ease-out 0s alternate 1;
     animation: splayImages-4 1s ease-out 0s alternate 1; }
@@ -1189,9 +1196,9 @@ nav {
   100% {
     top: 60px;
     left: 60px;
-    -webkit-transform: rotate(3deg);
-    -ms-transform: rotate(3deg);
-    transform: rotate(3deg); } }
+    -webkit-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg); } }
 #gallery-page {
   margin-top: 4px; }
   #gallery-page .gallery {
@@ -1470,7 +1477,8 @@ nav {
     width: 95%; }
 
 .highlight pre {
-  background-color: transparent; }
+  background-color: transparent;
+  tab-size: 2; }
 
 .highlight .hll {
   background-color: #49483e; }
