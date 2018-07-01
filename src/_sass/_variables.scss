@@ -1,0 +1,24 @@
+$drop-shadow-color: rgba(0,0,0,0.4);
+
+//font
+$font-base-size: 14px;
+$spacing-unit: 14px;
+
+//color palette
+$grey-light: #aaa;
+$grey: #333333; //rgba(51, 51, 51, 100)
+$offwhite: #ededf1;
+$teal-dark: #256b53; //rgba(37, 107, 83, 100)
+$teal: #3a8d6f; //rgba(58, 141, 111, 100)
+$teal-light: #61c59b; //rgba(97, 197, 155, 100)
+$blue: #68A3DD; //rgba(104,163,221,100)
+$blue-dark: #5788BA; //rgba(87,136,186,100)
+$salmon-dark: darken(#be5b6a, 20%);
+$salmon: #be5b6a; //rgba(190, 91, 106, 100)
+$indigo-dark: darken(#4f518c, 20%);
+$indigo: #4f518c; //rgba(79, 81, 140, 100)
+$purple-dark: darken(#6b2f69, 20%);
+$purple: #6b2f69; //rgba(107, 47, 105, 100)
+
+//color gradients array
+$colors: $teal, $blue, $salmon, $purple, $teal, $blue, $salmon, $purple;

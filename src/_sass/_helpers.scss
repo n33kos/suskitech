@@ -1,12 +1,33 @@
 //---------------------------Helpers----------------------------
+@mixin breakpoint($point){
+  @if ($point == lg){
+    @media (min-width: 1200px){ @content }
+  }
+  @else if ($point == md){
+    @media (min-width: 992px){ @content }
+  }
+  @else if ($point == sm){
+    @media (min-width: 768px){ @content }
+  }
+  @else if ($point == xs){
+    @media (min-width: 641px){ @content }
+  }
+  @else if ($point == xxs){
+    @media (min-width: 481px){ @content }
+  }
+  @else if ($point == xxxs){
+    @media  (max-width: 480px){ @content }
+  }
+}
 
-//colors
 .grey-light {
     color:$grey-light;
 }
+
 .grey {
     color:$grey;
 }
+
 .offwhite {
     color:$offwhite;
 }
@@ -14,9 +35,11 @@
 .teal-dark {
     color:$teal-dark;
 }
+
 .teal {
     color:$teal;
 }
+
 .teal-light {
     color:$teal-light;
 }
@@ -24,41 +47,51 @@
 .blue-dark {
     color:$blue-dark;
 }
+
 .blue {
     color:$blue;
 }
 
-
 .bg-grey {
     background-color:$grey;
 }
+
 .bg-offwhite {
     background-color:$offwhite;
 }
+
 .bg-teal-dark {
     background-color:$teal-dark;
 }
+
 .bg-teal {
     background-color:$teal;
 }
+
 .bg-teal-light {
     background-color:$teal-light;
 }
+
 .bg-blue-dark {
     background-color:$blue-dark;
 }
+
 .bg-blue {
     background-color:$blue;
 }
+
 .bg-salmon-dark {
     background-color: $salmon-dark;
 }
+
 .bg-salmon {
     background-color: $salmon;
 }
+
 .bg-indigo-dark {
     background-color: $indigo-dark;
 }
+
 .bg-indigo {
     background-color: $indigo;
 }
@@ -70,118 +103,122 @@
     background-color: $purple;
 }
 
-
 .font-merriweather{
     font-family: 'Merriweather', serif;
 }
+
 .font-josefin{
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.font-12 {font-size: 12px!important;}
-.font-14 {font-size: 14px!important;}
-.font-16 {font-size: 16px!important;}
-.font-18 {font-size: 18px!important;}
-.font-20 {font-size: 20px!important;}
-.font-22 {font-size: 22px!important;}
-.font-24 {font-size: 24px!important;}
-.font-26 {font-size: 26px!important;}
-.font-30 {font-size: 30px!important;}
+.font-12 {
+  font-size: 12px!important;
+}
+
+.font-14 {
+  font-size: 14px!important;
+}
+
+.font-16 {
+  font-size: 16px!important;
+}
+
+.font-18 {
+  font-size: 18px!important;
+}
+
+.font-20 {
+  font-size: 20px!important;
+}
+
+.font-22 {
+  font-size: 22px!important;
+}
+
+.font-24 {
+  font-size: 24px!important;
+}
+
+.font-26 {
+  font-size: 26px!important;
+}
+
+.font-30 {
+  font-size: 30px!important;
+}
 
 //----------------------Pseudo Material Design-------------------
 .shadow-0 {
-    -moz-box-shadow: 0 0 0 $drop-shadow-color;
-    -webkit-box-shadow: 0 0 0 $drop-shadow-color;
     box-shadow: 0 0 0 $drop-shadow-color;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=90, Color='$drop-shadow-color')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=90, Color='$drop-shadow-color');
     background: white;
 }
+
 .shadow-5{
-    -moz-box-shadow: 0 0 5px $drop-shadow-color;
-    -webkit-box-shadow: 0 0 5px $drop-shadow-color;
     box-shadow: 0 0 5px $drop-shadow-color;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=90, Color='$drop-shadow-color')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=90, Color='$drop-shadow-color');
     background: white;
 }
+
 .shadow-10{
-    -moz-box-shadow: 0 0 10px $drop-shadow-color;
-    -webkit-box-shadow: 0 0 10px $drop-shadow-color;
     box-shadow: 0 0 10px $drop-shadow-color;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='$drop-shadow-color')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='$drop-shadow-color');
     background: white;
 }
+
 .shadow-15{
-    -moz-box-shadow: 0 0 15px $drop-shadow-color;
-    -webkit-box-shadow: 0 0 15px $drop-shadow-color;
     box-shadow: 0 0 15px $drop-shadow-color;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=90, Color='$drop-shadow-color')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=90, Color='$drop-shadow-color');
     background: white;
 }
+
 .shadow-20{
-    -moz-box-shadow: 0 0 20px $drop-shadow-color;
-    -webkit-box-shadow: 0 0 20px $drop-shadow-color;
     box-shadow: 0 0 20px $drop-shadow-color;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=90, Color='$drop-shadow-color')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=90, Color='$drop-shadow-color');
     background: white;
 }
+
 .shadow-25{
-    -moz-box-shadow: 0 0 25px $drop-shadow-color;
-    -webkit-box-shadow: 0 0 25px $drop-shadow-color;
     box-shadow: 0 0 25px $drop-shadow-color;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=10, Direction=90, Color='$drop-shadow-color')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=10, Direction=90, Color='$drop-shadow-color');
     background: white;
 }
+
 .shadow-30{
-    -moz-box-shadow: 0 0 30px $drop-shadow-color;
-    -webkit-box-shadow: 0 0 30px $drop-shadow-color;
     box-shadow: 0 0 30px $drop-shadow-color;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=12, Direction=90, Color='$drop-shadow-color')";
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=12, Direction=90, Color='$drop-shadow-color');
     background: white;
 }
 
 .vignette {
   position: relative;
 }
+
 .vignette:after {
- -moz-box-shadow: inset 0 0 10em #666;
- -webkit-box-shadow: inset 0 0 10em #666;
- box-shadow: inset 0 0 10em #666;
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- z-index: 2;
- content: "";
+   box-shadow: inset 0 0 10em #666;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 2;
+   content: "";
 }
 
 .clearfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }
+
 .clearfix {
-    display: inline-block;
+  display: inline-block;
 }
 
 .block {
-    display: block;
+  display: block;
 }
 
 .inline {
-    display: inline;
+  display: inline;
 }
 
 .underline {
-    text-decoration: underline;
+  text-decoration: underline;
 }

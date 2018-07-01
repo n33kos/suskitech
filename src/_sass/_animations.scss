@@ -1,31 +1,24 @@
 //-------------Animations---------------------
 @keyframes bar-in{
-    0%{
-        width: 0;
-        opacity: 0;
-    }
-    100%{
-        width: calc(100% + 30px);
-        opacity: 1;
-    }
+  0%{
+    width: 0;
+    opacity: 0;
+  }
+  100%{
+    width: calc(100% + 30px);
+    opacity: 1;
+  }
 }
+
 @keyframes pulsate{
-	from{
-		background-color:darken( $teal-light, 15% );
-		-moz-box-shadow: 0 0 15px $teal-light;
-		-webkit-box-shadow: 0 0 15px $teal-light;
-		box-shadow: 0 0 15px $teal-light;
-		-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=90, Color='$teal-light')";
-		filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=90, Color='$teal-light');
-	}
-	to{
-		background-color: $teal-light;
-		-moz-box-shadow: 0 0 30px $teal-light;
-		-webkit-box-shadow: 0 0 30px $teal-light;
-		box-shadow: 0 0 30px $teal-light;
-		-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='$teal-light')";
-		filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='$teal-light');
-	}
+  from{
+    background-color:darken( $teal-light, 15% );
+    box-shadow: 0 0 15px $teal-light;
+  }
+  to{
+    background-color: $teal-light;
+    box-shadow: 0 0 30px $teal-light;
+  }
 }
 
 @keyframes slideInUp {

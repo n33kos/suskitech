@@ -4,9 +4,11 @@
 #
 # Gems:
 # jekyll - 3.8.0
-# bundler - 1.16.1
 # sass - 3.5.6
 # mini_magick - 4.8.0 (required installation of graphicsmagick)
+# autoprefixer-rails
+# octopress-autoprefixer
+# jekyll-babel
 #
 # Build instructions:
 # > jekyll build
@@ -35,9 +37,15 @@ codepen_username: n33kos
 markdown: kramdown
 destination: ../dist/
 highlighter: rouge
+sass:
+  style: compressed
 
 #-----------GEMS--------------
-plugins: [mini_magick]
+plugins:
+  - mini_magick
+  - jekyll-babel
+  - autoprefixer-rails
+  - octopress-autoprefixer
 
 mini_magick:
     jewelry: # Preset name

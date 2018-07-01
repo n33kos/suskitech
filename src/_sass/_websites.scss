@@ -1,138 +1,139 @@
 #website-index-page {
-    .page-title {
-    	text-align: center;
-    	margin-bottom: 20px;
-	    @include breakpoint(sm) {
-	        text-align: left;
-	    }
+  .page-title {
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include breakpoint(sm) {
+      text-align: left;
     }
-	.website{
-		text-align: center;
-		margin-bottom: 25px;
-		> div {
-			background-color: #464646;
-		}
-        @include breakpoint(sm) {
-            text-align: left;
+  }
+
+  .website{
+    text-align: center;
+    margin-bottom: 25px;
+
+    > div {
+      background-color: #464646;
+    }
+
+    @include breakpoint(sm) {
+      text-align: left;
+    }
+
+    .website-image {
+      min-height: 250px;
+    }
+
+    &:hover {
+      .website-image {
+        background-size: cover;
+        opacity: 0.15;
+      }
+
+      .tag {
+        opacity: 1;
+      }
+    }
+    
+    .title-bar {
+      background: #eee;
+      height: 15px;
+
+      .minimize, .close {
+        color: #eee;
+        width: 15px;
+        height: 15px;
+        float: right;
+        border-radius:1px;
+        font-family: 'Josefin Sans', sans-serif;
+        line-height: 10px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .minimize {
+        background-color: #ddd;
+      }
+
+      .close {
+        background-color: #d44;
+      }
+
+      .minimize:hover {
+        background-color: darken(#ddd, 15%);
+      }
+
+      .close:hover {
+        background-color: darken(#d44, 15%);
+      }
+
+      .address-bar {
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 15px;
+        margin-left: 2%;
+        margin-bottom: 10px;
+        width: 80%;
+        height: 20px;
+        background: white;
+        border-radius: 5px;
+        float:left;
+      }
+    }
+
+    .title-bar:nth-child(2) {
+      height: 24px;
+    }
+
+    .minisite-content{
+      padding: 0 15px 15px 15px;
+      position:absolute;
+      top: 80px;
+      width: 92%;
+    }
+
+    .website-image {
+      background-size: cover;
+      height: 160px;
+      transition:         all .50s ease-in-out;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      margin-bottom: 5px;
+      color: $grey;
+    }
+
+    .tag {
+      padding: 5px;
+      display: block;
+      font-size: 16px;
+      cursor: default;
+      margin: 0 auto;
+      margin-bottom: 5px;
+      width: 175px;
+      text-align: left;
+      opacity: 0;
+      background: white;
+      box-shadow: 0 1px 1px $drop-shadow-color;
+      transition: all .50s ease-in-out;
+
+      svg {
+        display: inline-block;
+        float: left;
+
+        path{
+          transition: all .50s ease-in-out;
+          fill: $teal;
         }
-		.website-image {
-			min-height: 250px;
-		}
-        &:hover {
-        	.website-image {
-				background-size: cover;
-				opacity: 0.15;
-			}
-			.tag {
-				opacity: 1;
-			}
-        }
-		.title-bar {
-			background: #eee;
-			height: 15px;
+      }
 
-			.minimize, .close {
-				color: #eee;
-				width: 15px;
-				height: 15px;
-				float: right;
-				border-radius:1px;
-            	font-family: 'Josefin Sans', sans-serif;
-            	line-height: 10px;
-            	text-align: center;
-            	cursor: pointer;
-			}
-			.minimize {
-				background-color: #ddd;
-			}
-			.close {
-				background-color: #d44;
-			}
-			.minimize:hover {
-				background-color: darken(#ddd, 15%);
-			}
-			.close:hover {
-				background-color: darken(#d44, 15%);
-			}
-			.address-bar {
-				font-size: 14px;
-				line-height: 20px;
-				padding-left: 15px;
-				margin-left: 2%;
-				margin-bottom: 10px;
-				width: 80%;
-				height: 20px;
-				background: white;
-				border-radius: 5px;
-				float:left;
-			}
-		}
-		.title-bar:nth-child(2) {
-			height: 24px;
-		}
-		.minisite-content{
-			padding: 0 15px 15px 15px;
-			position:absolute;
-			top: 80px;
-			width: 92%;
-		}
-		.website-image {
-			background-size: cover;
-			height: 160px;
-			transition:         all .50s ease-in-out;
-			-webkit-transition: all .50s ease-in-out;
-			-moz-transition:    all .50s ease-in-out;
-			-o-transition:      all .50s ease-in-out;
-		}
-
-		a {
-			display: block;
-			width: 100%;
-			text-decoration: none;
-			margin-bottom: 5px;
-			color: $grey;
-		}
-
-		.tag {
-			padding: 5px;
-			display: block;
-			font-size: 16px;
-			cursor: default;
-			margin: 0 auto;
-			margin-bottom: 5px;
-			width: 175px;
-			text-align: left;
-			opacity: 0;
-			background: white;
-
-			-moz-box-shadow: 0 1px 1px $drop-shadow-color;
-			-webkit-box-shadow: 0 1px 1px $drop-shadow-color;
-			box-shadow: 0 1px 1px $drop-shadow-color;
-			-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=90, Color='$drop-shadow-color')";
-			filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=90, Color='$drop-shadow-color');
-
-			transition:         all .50s ease-in-out;
-			-webkit-transition: all .50s ease-in-out;
-			-moz-transition:    all .50s ease-in-out;
-			-o-transition:      all .50s ease-in-out;
-
-			svg {
-				display: inline-block;
-				float: left;
-
-				path{
-					transition:         all .50s ease-in-out;
-					-webkit-transition: all .50s ease-in-out;
-					-moz-transition:    all .50s ease-in-out;
-					-o-transition:      all .50s ease-in-out;
-	        		fill: $teal;
-				}
-			}
-
-			.value {
-				display: inline-block;
-				margin-left: 10px;
-			}
-		}
-	}
+      .value {
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+  }
 }

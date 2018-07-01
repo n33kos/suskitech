@@ -1,0 +1,159 @@
+nav {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 0 0 0;
+  padding-bottom: 40px;
+
+  @include breakpoint(sm) {
+    padding-bottom: 0;
+  }
+
+  .navbar-toggle {
+    float:none;
+    margin:0 auto;
+    margin-top: 15px;
+    padding:5px;
+    width:50px;
+    height:40px;
+    display:block;
+
+    @include breakpoint(sm) {
+      display:none;
+    }
+
+    #nav-toggle span,
+    #nav-toggle span:before,
+    #nav-toggle span:after {
+      cursor: pointer;
+      border-radius: 1px;
+      background:$grey;
+      height: 5px;
+      width: 40px;
+      position: absolute;
+      display: block;
+      content: '';
+    }
+
+    #nav-toggle span:before {
+      top: -10px;
+    }
+
+    #nav-toggle span:after {
+      bottom: -10px;
+    }
+
+    #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+      transition: all 500ms ease-in-out;
+    }
+  }
+  .navbar-toggle:not(.collapsed) {
+    #nav-toggle span {
+      background-color: transparent;
+    }
+
+    #nav-toggle span:before, #nav-toggle span:after {
+      top: 0;
+    }
+
+    #nav-toggle span:before {
+      transform: rotate(45deg);
+    }
+
+    #nav-toggle span:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  #main-navigation {
+    padding:0;
+    margin:0;
+    overflow:hidden;
+
+    li {
+      display:inline-block;
+      margin:0;
+      padding: 5px 15px 0 15px;
+      width: 100%;
+      text-align: center;
+
+      @include breakpoint(sm) {
+        width: auto;
+        &:first-child{padding-left:0!important;}
+      }
+
+      a {
+        text-decoration: none!important;
+        display: inline-block;
+        padding-bottom: 0px;
+        overflow:hidden;
+
+        .bar {
+          width: calc(100% + 60px);
+          height: 4px;
+          position: absolute;
+          bottom: -4px;
+          left: -30px;
+          background: #aaa;
+          box-shadow:inset 0 1px 0px rgba(0,0,0,0.1);
+          animation: fadeOutDown 1s ease 0s 1;
+        }
+      }
+
+      a, a:visited, a:focus, a:active {
+        color: $grey;
+        font-size: 16px;
+      }
+
+      a.active {
+        .bar {
+          z-index: 1;
+          animation: initial;
+        }
+      }
+
+      a:hover{
+        .bar {
+          z-index: 2;
+        }
+      }
+    }
+
+    @for $i from 1 through 5 {
+      & li:nth-child(#{$i}n) a {
+        &:hover .bar{
+          animation: bar-in 0.5s ease 0s 1;
+        }
+
+        &:hover, &.active {
+          color: nth($colors, $i);
+        }
+
+        &.active {
+          font-weight: 600;
+        }
+
+        .bar {
+          background: nth($colors, $i);
+          background: linear-gradient(to right,  nth($colors, $i) 0%, nth($colors, $i+1) 31%, nth($colors, $i+2) 66%, nth($colors, $i+3) 100%);
+        }
+      }
+    }
+  }
+
+  &:after{
+    content: '';
+    width: calc(100% + 60px);
+    height: 4px;
+    position: absolute;
+    bottom: -4px;
+    left: -30px;
+    background: $teal;
+    background: linear-gradient(to right,  $teal 0%, $blue 31%, $salmon 66%, $purple 100%);
+    box-shadow:inset 0 1px 0px rgba(0,0,0,0.1);
+
+    @include breakpoint(sm) {
+      content: none;
+    }
+  }
+}

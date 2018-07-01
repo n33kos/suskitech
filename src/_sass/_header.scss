@@ -1,0 +1,126 @@
+#header{
+  text-align: center;
+  display: block;
+  margin-bottom: 15px;
+
+  @include breakpoint(sm) {
+    text-align: left;
+  }
+
+  h1 {
+    display: block;
+    float: none;
+
+    @include breakpoint(sm) {
+      display: inline-block;
+      float: left;
+    }
+  }
+
+  .title {
+    a, a:visited, a:hover, a:active {
+      color: $grey;
+      text-decoration: none;
+    }
+  }
+
+  .tagline {
+    position: relative;
+    display: block;
+    cursor: default;
+    margin: 0;
+    float: none;
+
+    @include breakpoint(sm) {
+      display: inline-block;
+      cursor: pointer;
+      margin-top: 40px;
+      margin-left: 10px;
+      float:left;
+    }
+
+    .name {
+      font-size: 20px;
+      font-family: 'Josefin Sans', sans-serif;
+      color: #aaa;
+
+      a {
+        text-decoration: none;
+        transition: all 500ms ease-in-out;
+        color: #aaa;
+        &:hover, &:active {
+          color: $teal;
+        }
+      }
+    }
+
+    .level {
+      display: inline;
+    }
+  }
+}
+
+.header-social {
+  position: absolute;
+  bottom: 0;
+  right: calc(50% - 60px);
+  text-align: center;
+  float: right;
+
+  @include breakpoint(sm) {
+    text-align: right;
+    right: 0;
+  }
+
+  .icons {
+    margin: auto;
+    float: none;
+    display: block;
+    width: 120px;
+    overflow: visible;
+
+    @include breakpoint(sm) {
+      float: right;
+    }
+
+    a {
+      position: relative;
+      display: inline-block;
+      float: right;
+    }
+
+    a:not(:last-child) {
+      margin-left: 10px;
+    }
+
+    .github {
+      width: 20px;
+    }
+
+    .codepen {
+      width: 21px;
+      margin-top: 1px;
+    }
+
+    .linkedin {
+      width: 22px;
+    }
+
+    .email{
+      width: 20px;
+      margin-top: 4px;
+    }
+
+    .icon {
+      svg path{
+        transition: all 500ms ease-in-out;
+      }
+    }
+
+    .icon:hover {
+      svg path{
+        fill: $teal;
+      }
+    }
+  }
+}

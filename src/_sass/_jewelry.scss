@@ -4,22 +4,27 @@
 		color: white;
 		text-shadow: 1px 1px 1px rgba(0,0,0,0.75);
 		cursor: pointer;
+
 		.openclose {
 			position: absolute;
 			top: 15px;
 			font-family: 'Josefin Sans', sans-serif;
 			width: auto;
+
 			@include breakpoint(sm) {
 				width: 330px;
 			}
+
 			@include breakpoint(md) {
 				width: 440px;
 			}
+
 			@include breakpoint(lg) {
 				width: 540px;
 			}
 		}
 	}
+
 	.piece-gallery .openclose:after {
 		content: '+';
 		font-size: 40px;
@@ -31,10 +36,12 @@
 		float: right;
 		margin-top: -10px;
 	}
+
 	.piece-gallery.active .openclose:after {
 		content: 'x';
 		font-size: 38px;
 	}
+
 	.slick-dots {
 		bottom: 0;
 		opacity: 0;
@@ -44,9 +51,10 @@
 			color: white;
 		}
 		li.slick-active button:before {
-			color: white;	
+			color: white;
 		}
 	}
+
 	.piece-gallery.active {
 		.slick-dots {
 			bottom: 0;
@@ -54,12 +62,10 @@
 			height: auto;
 		}
 	}
+
 	.piece {
 		height: 60px;
-		transition:         height .50s ease;
-		-webkit-transition: height .50s ease;
-		-moz-transition:    height .50s ease;
-		-o-transition:      height .50s ease;
+		transition: height .50s ease;
 
 		img {
 			position: static;
@@ -70,47 +76,53 @@
 		}
 
 	}
+
 	.piece.active {
 		height: auto;
+
 		@include breakpoint(sm) {
 			height: 330px;
 		}
+
 		@include breakpoint(md) {
 			height: 440px;
 		}
+
 		@include breakpoint(lg) {
 			height: 540px;
 		}
+
 		.control {
 			ul {
 				opacity: 1;
 			}
 		}
 	}
+
 	.control {
 		h5 {
 			position: absolute;
 			top: 5px;
 			margin-left: 45px;
+
 			@include breakpoint(sm) {
 				margin-left: 30px;
 			}
 		}
+
 		ul {
 			margin-left: -10px;
 			position: absolute;
 			top: 50px;
 			opacity: 0;
-			transition:         all .50s ease;
-			-webkit-transition: all .50s ease;
-			-moz-transition:    all .50s ease;
-			-o-transition:      all .50s ease;
-			
+			transition: all .50s ease;
+
 			@include breakpoint(sm) {
 				margin-left: 5px;
 			}
 		}
 	}
+
 	.expand-all:after {
 		width: 100%;
 		display: block;
@@ -118,6 +130,7 @@
 		cursor: pointer;
 		content: 'Expand All +';
 	}
+
 	.expand-all.active:after {
 		content: 'Contract All -';
 	}
