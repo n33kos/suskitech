@@ -109,3 +109,15 @@
 		margin: 0 auto;
 	}
 }
+
+.post-navigation {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 40px;
+
+	a {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

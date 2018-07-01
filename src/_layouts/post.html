@@ -21,6 +21,14 @@ layout: default
               {{ content }}
             </div>
         </div>
+        <div class="post-navigation">
+          {% if page.prev_in_category.url %}
+            <a class="prev" href="{{page.prev_in_category.url}}">&larr; {{page.prev_in_category.title}}</a>
+          {% endif %}
+          {% if page.next_in_category.url %}
+            <a class="next" href="{{page.next_in_category.url}}">{{page.next_in_category.title}} &rarr;</a>
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>
