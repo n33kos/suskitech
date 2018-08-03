@@ -7,7 +7,7 @@
 
 		.openclose {
 			position: absolute;
-			top: 15px;
+			top: 20px;
 			font-family: 'Josefin Sans', sans-serif;
 			width: auto;
 
@@ -100,9 +100,8 @@
 	}
 
 	.control {
-		h5 {
+		h2 {
 			position: absolute;
-			top: 5px;
 			margin-left: 45px;
 
 			@include breakpoint(sm) {

@@ -1,0 +1,79 @@
+---
+layout: post
+title: "Law of Sines and Cosines"
+date: 2018-08-02 00:00
+author: n33kos
+category: Blog
+permalink: /blog/law-of-sines-and-cosines/
+excerpt: "Up until this point we've focused on right triangles, now it's time enter the wide world of triangular variety with the law of sines and the law of cosines"
+---
+<div>
+  <p>
+    Up until this point we've focused on right triangles, now it's time enter the wide world of triangular variety with <b>the law of sines</b> and <b>the law of cosines</b>. We can use these laws (sometimes also called rules or formulas) to help us solve triangles which might not have a 90 degree angle.
+  </p>
+
+  <h4>
+    The Law Of Sines
+  </h4>
+
+  <p>
+    Let's begin with <b>the law of sines</b>, it states that the ratio of an angle's sine to its opposite is constant for any angle in a triangle. Written as a formula it's something like <code class="inline">sin(&ang;A)/BC = sin(&ang;B)/AC = sin(&ang;C)/AB</code>. In the example below you can see that sin(&ang;A) divided by the length of its opposite BC is equal to sin(&ang;B) divided by the length of <i>its</i> opposite AC. Because the same is true for &ang;C, we can solve an entire triangle given only two angles and one side length.
+  </p>
+
+  <p>
+    <div class="codepen-embed">
+      <p data-height="500" data-slug-hash="QBOXar" data-default-tab="result" data-user="n33kos" data-embed-version="2" data-theme-id="dark" class="codepen"></p>
+      <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    </div>
+  </p>
+
+  <p>
+    We know the angles will add up to 180&deg; so we can infer the value of the last angle <code class="inline">&ang;A = 180 - (&ang;C + &ang;B)</code>. Then we use the known values to create two equations, one to solve each of the remaining side lengths similar to the example below.
+  </p>
+
+{% highlight plaintext %}
+  1.  sin(93) / 10.5 = sin(38) / x
+  2.  x * sin(93) / 10.5 = sin(38)
+  3.  x = sin(38) / (sin(93) / 10.5)
+  4.  x = 6.47
+{% endhighlight %}
+
+  <h4>
+    The Law Of Cosines
+  </h4>
+
+  <p>
+    In my examples for this page, I didn't use the law of sines. This is because I keep the vertex coordinates in an array, then draw lines between them in canvas. It makes it easy to get the side lengths using the distance formula but I still need to solve the angles, so I use <b>the law of cosines</b> to measure the angles.
+  </p>
+
+  <p>
+    <div class="codepen-embed">
+      <p data-height="600" data-slug-hash="NBpdjG" data-default-tab="result" data-user="n33kos" data-embed-version="2" data-theme-id="dark" class="codepen"></p>
+      <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    </div>
+  </p>
+
+  <p>
+    <b>The law of cosines</b> as displayed above is an adaptation of the Pythagorean theorem, given two side lengths and the angle between them we can use it to determine the length if the angle's opposite. It looks like this <code class="inline">a² = b² + c² - 2⋆b⋆c⋆cos(&Theta;)</code>. For my examples I had the value of a, b, and c but needed the value of the angles. I rearranged the equation and created a function which returns the angle of &Theta;, then call it once for each angle.
+  </p>
+
+
+{% highlight javascript %}
+  getAngles = (A, B, C) => {
+    return {
+      A : radToDeg(lawOfCosines(A, B, C)),
+      B : radToDeg(lawOfCosines(C, A, B)),
+      C : radToDeg(lawOfCosines(B, A, C)),
+    };
+  }
+
+  lawOfCosines = (A, B, C) => Math.acos(
+      (Math.pow(A, 2) - (Math.pow(B, 2) + Math.pow(C, 2))) / (-2*B*C)
+  );
+{% endhighlight %}
+
+  <p>
+    This way I can manipulate the position of the points directly while correctly recalculating all the side and angle values. I also implemented some sliders instead of inputs which makes it a lot easier to modify the triangle. Now I can integrate these functions into NEWT to help with some geometry generation classes.
+  </p>
+
+</div>

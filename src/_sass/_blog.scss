@@ -84,7 +84,14 @@
 	code {
 		background-color: #333;
 		color: white;
+		display: block;
+		font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+		line-height: 1.5;
+		white-space: pre;
+		white-space: pre-wrap;
 	}
+
+
 
 	.bold {
 		font-weight: 900;
@@ -92,6 +99,10 @@
 
 	pre.inline {
 		padding: 2px 10px;
+	}
+
+	.inline {
+		display: inline;
 	}
 
 	.overline {

@@ -5,9 +5,25 @@
     <description>A portfolio of work by Nicholas Suski</description>
     <link>http://suskitech.org/</link>
     <atom:link href="http://suskitech.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 Jul 2018 11:30:16 -0600</pubDate>
-    <lastBuildDate>Sun, 01 Jul 2018 11:30:16 -0600</lastBuildDate>
+    <pubDate>Thu, 02 Aug 2018 22:28:24 -0600</pubDate>
+    <lastBuildDate>Thu, 02 Aug 2018 22:28:24 -0600</lastBuildDate>
     <generator>Jekyll v3.8.0</generator>
+    
+    
+    <item>
+        <title>Law of Sines and Cosines</title>
+        <description>&lt;div&gt;
+  &lt;p&gt;
+    Up until this point we've focused on right triangles, now it's time enter the wid...</description>
+        <pubDate>Thu, 02 Aug 2018 00:00:00 -0600</pubDate>
+        <link>http://suskitech.org/blog/law-of-sines-and-cosines/</link>
+        <guid isPermaLink="true">http://suskitech.org/blog/law-of-sines-and-cosines/</guid>
+        
+        
+        <category>Blog</category>
+        
+    </item>
+    
     
     
     <item>
