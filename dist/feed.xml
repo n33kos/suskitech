@@ -5,9 +5,26 @@
     <description>A portfolio of work by Nicholas Suski</description>
     <link>http://suskitech.org/</link>
     <atom:link href="http://suskitech.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 02 Aug 2018 22:28:24 -0600</pubDate>
-    <lastBuildDate>Thu, 02 Aug 2018 22:28:24 -0600</lastBuildDate>
+    <pubDate>Sat, 18 Aug 2018 23:17:56 -0600</pubDate>
+    <lastBuildDate>Sat, 18 Aug 2018 23:17:56 -0600</lastBuildDate>
     <generator>Jekyll v3.8.0</generator>
+    
+    
+    <item>
+        <title>Canvas Confetti</title>
+        <description>&lt;div class=&quot;margin-bottom-15&quot;&gt;
+	&lt;p&gt;
+    &lt;div class=&quot;codepen-embed&quot;&gt;
+      &lt;p data-height=&quot;500&quot;...</description>
+        <pubDate>Thu, 16 Aug 2018 02:29:00 -0600</pubDate>
+        <link>http://suskitech.org/code/confetti/</link>
+        <guid isPermaLink="true">http://suskitech.org/code/confetti/</guid>
+        
+        
+        <category>Code</category>
+        
+    </item>
+    
     
     
     <item>
