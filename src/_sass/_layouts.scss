@@ -1,0 +1,7 @@
+#post-page {
+    .codepen-embed {
+      margin-left: -$page-gutter;
+      position: relative;
+      width: calc(100% + #{$page-gutter * 2});
+    }
+}

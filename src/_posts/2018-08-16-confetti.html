@@ -5,17 +5,11 @@ date: 2018-08-16 02:29
 author: n33kos
 category: Code
 permalink: /code/confetti/
+codepen_slug: gjVQwv
 thumb_image: /img/code/confetti.gif
 ---
 
 <div class="margin-bottom-15">
-	<p>
-    <div class="codepen-embed">
-      <p data-height="500" data-slug-hash="gjVQwv" data-default-tab="result" data-user="n33kos" data-embed-version="2" data-theme-id="dark" class="codepen"></p>
-      <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-    </div>
-  </p>
-
 	<p>
 		Recently, I found myself needing to rebuild a confetti effect, the old one used css and had broken at some point during a stack upgrade. I decided it would be most efficient to use canvas over DOM elements so I fired up my trusty canvas2D template and got to work. I wanted implementation to be rapid so I decided to stick with square and rectangular confetti pieces. First we declare some variables, grabbing the canvas element and the 2D context. The confetti variable is an array of confetti objects which we will be mutating, the rest are constants to control the confetti count, global physics, and colors.
 	</p>

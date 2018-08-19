@@ -77,8 +77,8 @@ p {
 
 //------------Muss around with Bootstrap--------------
 .container {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: $page-gutter;
+  padding-right: $page-gutter;
 
   iframe {
     max-width: 100%;
