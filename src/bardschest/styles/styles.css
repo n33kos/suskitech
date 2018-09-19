@@ -1,0 +1,464 @@
+html {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  background-color: #222;
+  font-family: 'MedievalSharp', cursive;
+  height: 100%;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: pixelated;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+
+canvas {
+  display: block;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.logo {
+  max-width: 100%;
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: block;
+}
+
+.UserInterface {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.WoodButton {
+  background-image: url('../img/woodbg.png');
+  background-color: #281501;
+  background-size: 53%;
+  border: 4px solid #281501;
+  border-radius: 2px;
+  border-left-color: #4a2b0a;
+  border-right-color: #4a2b0a;
+  border-top-color: #bb9062;
+  color: #52320f;
+  cursor: pointer;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 35px;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 7px 50px;
+  text-shadow: -1px -1px #bb9062, 2px 2px 3px #281501;
+  width: 200px;
+  display: block;
+}
+
+.Screen {
+  color: white;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
+  width: 100%;
+}
+
+.Screen.active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.Screen button {
+  margin: 30px auto;
+}
+
+.Screen[data-screen="mainmenu"] .IconButton,
+.Screen[data-screen="about"] .IconButton,
+.Screen[data-screen="score"] .IconButton,
+.Screen[data-screen="level"] .IconButton:not(.LevelUp):not(.LevelDown) {
+  right: 15px;
+  position: fixed;
+  top: 5px;
+}
+
+.Screen[data-screen="mainmenu"] > nav,
+.Screen[data-screen="level"] > nav,
+.Screen[data-screen="about"] > nav,
+.Screen[data-screen="score"] > nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  background-size: cover;
+  border-radius: 40px;
+  bottom: 0;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  padding: 10px 30px;
+  padding-top: 30px;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: calc(100% - 60px);
+  max-width: 320px;
+}
+
+.Screen[data-screen="about"] > nav {
+  max-width: 600px;
+}
+
+.DetailsCard {
+  background-image: url('../img/popup.png');
+  background-position: top left;
+  background-size: cover;
+  height: 100px;
+  left: 10px;
+  opacity: 0.25;
+  padding: 14px;
+  position: fixed;
+  text-align: center;
+  top: 4px;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100px;
+}
+
+.DetailsCard:hover {
+  opacity: 1;
+}
+
+.DetailsCard > div {
+  margin: 5px 0px;
+}
+
+.Screen[data-screen="game"] > nav {
+  position: fixed;
+  right: 10px;
+  top: 8px;
+  width: 110px;
+}
+
+.Screen[data-screen="game"] .Score {
+  position:  fixed;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: white;
+  font-size: 30px;
+}
+
+.Screen[data-screen="score"] {
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 90%);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.Screen[data-screen="score"]  .Score {
+  font-size: 40px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+  color: black;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 2;
+}
+
+.Screen[data-screen="score"] > div {
+  text-align: center;
+  width: 100%;
+}
+
+.Screen[data-screen="score"].active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.Screen[data-screen="score"] > nav {
+    left: 50%;
+    margin: 0;
+    position: fixed;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 3;
+}
+
+.Band {
+  background-image: url('../img/fringe.png');
+  background-repeat: repeat-x;
+  background-size: contain;
+  border-radius: 8px;
+  display: block;
+  height: 15vh;
+  left: 0;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  z-index: 3;
+}
+
+.ChestTop {
+  background-image: url('../img/woodtop.png');
+  background-repeat: repeat-x;
+  background-size: contain;
+  border-radius: 8px;
+  border: solid 12px #6c6c6c;
+  -o-border-image: linear-gradient(#e0e0e0, #6c6c6c, #424244) 30;
+     border-image: linear-gradient(#e0e0e0, #6c6c6c, #424244) 30;
+  border-top-width: 4px;
+  box-sizing: border-box;
+  display: block;
+  height: 50%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.ChestBottom {
+  background-image: url('../img/woodbottom.png');
+  background-repeat: repeat-x;
+  background-size: contain;
+  border-radius: 8px;
+  bottom: 0;
+  display: block;
+  height: 50%;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.Indicators {
+  align-items: center;
+  bottom: 20px;
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  left: 50%;
+  position: fixed;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 80vw;
+  z-index: 3;
+}
+
+.Indicator {
+  background-color: #222;
+  border-radius: 50%;
+  height: 40px;
+  margin: 0 10px;
+  position: relative;
+  width: 40px;
+}
+
+.Indicator:after {
+  background-image: url('../img/indicator.png');
+  background-size: cover;
+  content: '';
+  height: 40px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+.GameInfo {
+  color: white;
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 30px;
+  width: calc(100% - 60px);
+  max-width: 100%;
+}
+
+.GameInfo a {
+  color: #fff5bf;
+}
+
+.GameInfo ul li {
+  margin: 10px 0;
+}
+
+.GoldenHeart {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 400px;
+}
+
+.LevelSelect {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 60px auto 0;
+  max-width: 420px;
+  width: 100%;
+}
+
+.LevelSelect .Level {
+  color: #fff5bf;
+  font-size: 34px;
+  margin: 20px;
+  text-align: center;
+}
+
+.LevelDifficulty {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  max-width: 420px;
+  position: relative;
+  width: 100%;
+}
+
+.LevelDifficulty .Star {
+  background-image: url('../img/star.png');
+  background-size: cover;
+  height: 48px;
+  margin: 5px;
+  opacity: 0.25;
+  transition: opacity 0.7s ease;
+  width: 48px;
+}
+
+.LevelDifficulty.difficulty-1 .Star:nth-child(1),
+.LevelDifficulty.difficulty-2 .Star:nth-child(1),
+.LevelDifficulty.difficulty-2 .Star:nth-child(2),
+.LevelDifficulty.difficulty-3 .Star:nth-child(1),
+.LevelDifficulty.difficulty-3 .Star:nth-child(2),
+.LevelDifficulty.difficulty-3 .Star:nth-child(3),
+.LevelDifficulty.difficulty-4 .Star:not(:nth-child(5)),
+.LevelDifficulty.difficulty-5 .Star {
+  opacity: 1;
+}
+
+.Screen[data-screen="level"] > nav .GameInfo {
+  font-size: 20px;
+  margin-bottom: 25px;
+  text-align: center;
+  line-height: 1.25;
+  color: #dcd3a5;
+  padding: 0;
+  width: auto;
+}
+
+.Screen[data-screen="level"] > nav button {
+  margin: 30px auto;
+}
+
+.Screen[data-screen="level"] h3 {
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  top: -20px;
+}
+
+.AddScore {
+  width: 100%;
+  text-align: center;
+  color: white;
+  position: fixed;
+  font-size: 30px;
+  top: 50%;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  z-index: 5;
+}
+
+.AddScore.active {
+  opacity: 1;
+  transition: none;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.AddScore.active.negative {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.AddScore.negative {
+  color: red;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.IconButton {
+  background-color: none;
+  background-color: transparent;
+  background-image: url('../img/pause.png');
+  background-position: center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  margin: 0!important;
+  height: 32px;
+  width: 32px;
+  outline: 0;
+}
+
+.IconButton[data-nav="pause"]{
+  background-image: url('../img/pause.png');
+}
+
+.IconButton[data-nav="fullscreen"]{
+  background-image: url('../img/fullscreen.png');
+}
+
+.IconButton[data-nav="restart"]{
+  background-image: url('../img/restart.png');
+}
+
+.IconButton[data-nav="play"],
+.IconButton.LevelDown {
+  background-image: url('../img/reverse.png');
+}
+
+.IconButton[data-nav="reverse"],
+.IconButton.LevelUp {
+  background-image: url('../img/play.png');
+}

@@ -1,9 +1,3 @@
-{% assign test= site.static_files | sort: 'modified_time'%}
-{% for file in test reversed %}
-  {% if file.path contains "pixelart" %}
-    <!-- {% increment display_count %} -->
-    {% if display_count <= include.limit or include.limit < 0 %}
-      <img src="{{ file.path }}" class="art" width="200px"/>
-    {% endif %}
-  {% endif %}
-{% endfor %}
+{% assign test= site.static_files | sort: 'modified_time'%} {% for file in test reversed %} {% if file.path contains "pixelart" %} <!-- {% increment display_count %} --> {% if display_count <= include.limit or include.limit < 0 %}
+<img src="{{ file.path }}" class="art" width="200px"/>
+{% endif %} {% endif %} {% endfor %}

@@ -116,6 +116,14 @@
 	.center {
 		margin: 0 auto;
 	}
+
+	iframe {
+		display: block;
+		height: 600px;
+		margin: 0 auto;
+		max-width: 100%;
+		width: 600px;
+	}
 }
 
 .post-navigation {
