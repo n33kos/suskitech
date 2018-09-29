@@ -1,43 +1,40 @@
 <?php
-	require './epiphany/Epi.php';
 	require './hexagram.php';
 	require './iChing.php';
 	require './iChingDesc.php';
 
 	header("Access-Control-Allow-Origin: *");
 
-	Epi::init('route');
-	getRoute()->get('/', 'home');
-	getRoute()->get('/hexagram', 'hexagram');
-	getRoute()->run();
+	$lines = isset($_REQUEST['lines']) && $_REQUEST['lines'] != "" ? $_REQUEST['lines'] : null;
+	$method = isset($_REQUEST['cast']) && $_REQUEST['cast'] != "" ? $_REQUEST['cast'] : null;
+
+	if (!empty($method) || !empty($lines)) {
+		cast($method, $lines);
+	} else {
+		home();
+	}
 
 	function home() {
 		echo '
 			<h1>Welcome to the iChing API 0.0.1</h1>
-			<h3>/hexagram?options=values</h3>
+			<h3>/hexagram?cast=threecoin&lines=997867</h3>
 			<ul>
 				<li><pre>?lines=997876</pre>Get hexagram (6,7,8,9 notation))</li>
-				<li><pre>?method=yarrow</pre>Get hexagram Method (threecoin|yarrow)</li>
+				<li><pre>?cast=yarrow</pre>Get hexagram Method (threecoin|yarrow)</li>
 			</ul>
 		';
 	}
 
-	function hexagram() {
-		
-		$lines = isset($_REQUEST['lines']) && $_REQUEST['lines'] != "" ? $_REQUEST['lines'] : "";
-		$method =  isset($_REQUEST['method']) && $_REQUEST['method'] != "" ? $_REQUEST['method'] : "threecoin";
-
-
-		if(strlen($lines) != 6){
-			for ($i=0; $i < 6; $i++) { 
+	function cast($method, $lines) {
+		if(empty($lines)) {
+			for ($i=0; $i < 6; $i++) {
 				$lines .= getLine($method);
 			}
 		}
-		
+
 		echo json_encode ( new Hexagram($lines) );
 		return 200;
 	}
-
 
 	//----------------Utility Functions-----------------
 	function getLine ($method) {
@@ -100,7 +97,7 @@
 				$runningright += $righthand <= 4 ? $righthand : ($righthand % 4 == 0 ? 4 : $righthand % 4);
 				$righthand -= $runningright;
 
-				$pile[$i] = $runningleft+$runningright; 
+				$pile[$i] = $runningleft+$runningright;
 			}
 
 			if($pile[0] > 5){
@@ -134,5 +131,4 @@
 			}
 		}
 	}
-
 ?>
