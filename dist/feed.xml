@@ -5,9 +5,11 @@
     <description>A portfolio of work by Nicholas Suski</description>
     <link>http://suskitech.org/</link>
     <atom:link href="http://suskitech.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 28 Sep 2018 23:56:27 -0600</pubDate>
-    <lastBuildDate>Fri, 28 Sep 2018 23:56:27 -0600</lastBuildDate>
+    <pubDate>Sat, 29 Sep 2018 17:55:04 -0600</pubDate>
+    <lastBuildDate>Sat, 29 Sep 2018 17:55:04 -0600</lastBuildDate>
     <generator>Jekyll v3.8.0</generator>
+    
+    
     
     
     <item>
@@ -152,6 +154,8 @@
         <category>Code</category>
         
     </item>
+    
+    
     
     
     
