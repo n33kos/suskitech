@@ -46,7 +46,6 @@ jQuery(document).ready(function($){
   $.getJSON('https://api.github.com/users/{{site.github_username}}/repos?sort=updated&order=desc',
   function data(data) {
     if(data){
-      //console.log(data);
       $.each( data, function( key, value ) {
         $('.repos').append(
           '<div class="repo-name"><a href="' + value.clone_url + '">' + value.full_name + '</a></div>' +
