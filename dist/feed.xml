@@ -5,9 +5,25 @@
     <description>A portfolio of work by Nicholas Suski</description>
     <link>http://suskitech.org/</link>
     <atom:link href="http://suskitech.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Nov 2018 13:53:11 -0700</pubDate>
-    <lastBuildDate>Sat, 24 Nov 2018 13:53:11 -0700</lastBuildDate>
+    <pubDate>Sun, 09 Dec 2018 19:26:23 -0700</pubDate>
+    <lastBuildDate>Sun, 09 Dec 2018 19:26:23 -0700</lastBuildDate>
     <generator>Jekyll v3.8.0</generator>
+    
+    
+    <item>
+        <title>Unit Circle</title>
+        <description>&lt;div&gt;
+  &lt;p&gt;
+    A &lt;b&gt;unit circle&lt;/b&gt; is a regular old circle with a radius of &lt;b&gt;1&lt;/b&gt; and a cent...</description>
+        <pubDate>Sun, 09 Dec 2018 00:00:00 -0700</pubDate>
+        <link>http://suskitech.org/blog/unit-circle/</link>
+        <guid isPermaLink="true">http://suskitech.org/blog/unit-circle/</guid>
+        
+        
+        <category>Blog</category>
+        
+    </item>
+    
     
     
     

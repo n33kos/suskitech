@@ -1,0 +1,69 @@
+---
+layout: post
+title: "Unit Circle"
+date: 2018-12-09 00:00
+author: n33kos
+category: Blog
+permalink: /blog/unit-circle/
+excerpt: "A unit circle is a regular old circle with a radius of 1 and a center point of (0, 0) but is incredibly useful in the graphics drawing tool belt."
+---
+<div>
+  <p>
+    A <b>unit circle</b> is a regular old circle with a radius of <b>1</b> and a center point of <b>(0, 0)</b> but is incredibly useful in the graphics drawing tool belt. This is because any coordinate within the circumference of the circle falls between <b>-1</b> and <b>1</b>. Before we get too far into things, we’re going to be drawing angles from the center point of this circle so we need to solidify a convention for which direction is positive and which is negative.
+  </p>
+
+  <p>
+    In my examples, I will be treating counterclockwise as a positive angle and clockwise as a negative angle. Which means if we draw an angle whose initial side is pointing straight to the right (intersecting the circumference at position <b>(1, 0)</b>), our positive angle would be measured counterclockwise until we reach the terminal side. In all of my following examples, we measure angles relative to an initial side so for the sake of consistency I will always assume the initial side is a line from <b>(0, 0)</b> to <b>(1, 0)</b>. Below is an example of in which I have drawn both negative and positive angles using the same initial side.
+  </p>
+
+  <p>
+    <div class="codepen-embed">
+      <p data-height="500" data-slug-hash="aPbGmw" data-default-tab="result" data-user="n33kos" data-embed-version="2" data-theme-id="dark" class="codepen"></p>
+      <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    </div>
+  </p>
+
+  <p>
+    Now, what if we wanted to determine the position of a point along the circumference of our unit circle? It turns out all we need is an angle and our good friend <code class="inline">SOH CAH TOA</code>. If we draw a right triangle using the terminal side of an angle as the hypotenuse, we can solve the side lengths. In the example below, you can see a right triangle as described and you may notice that the adjacent and opposite sides of the triangle line up perfectly with the X and Y coordinates of the intersection point, we can work with that.
+  </p>
+
+  <p>
+    <div class="codepen-embed">
+      <p data-height="500" data-slug-hash="XoWqGV" data-default-tab="result" data-user="n33kos" data-embed-version="2" data-theme-id="dark" class="codepen"></p>
+      <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    </div>
+  </p>
+
+  <p>
+    We know the length of the hypotenuse is <b>1</b> because the radius of the circle is also <b>1</b>. We also know how to use <code class="inline">SOH CAH TOA</code> to solve the other sides, so let's do a little math. The cosine of angle theta is equal to a/1 which simplifies to <code class="inline">X = cos(Θ)</code>. If we do the same for the opposite, we'll find that the sine of angle theta is equal to b/1 or <code class="inline">Y = sin(Θ)</code>. Below you can see an animated example of a unit circle in which the angle of theta is constantly incremented. Notice how the position of the terminal point is directly driven by the sine and cosine functions.
+  </p>
+
+  <p>
+    <div class="codepen-embed">
+      <p data-height="500" data-slug-hash="MzXbYM" data-default-tab="result" data-user="n33kos" data-embed-version="2" data-theme-id="dark" class="codepen"></p>
+      <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    </div>
+  </p>
+
+  <p>
+    This is the part of the unit circle that ends up being really useful in drawing graphics, we can distill the entire concept into a simple function. Here is the function I've built into <a href="https://github.com/n33kos/trize" target="_blank" rel="noopener noreferrer" title="Trize on github">Trize</a>, a canvas triangle drawing library I'm developing to speed up my examples on this blog.
+  </p>
+
+{% highlight javascript %}
+  pointOnCircle(angle, center, radius) => {
+    center.x + radius * Math.cos(angle),
+    center.y + radius * Math.sin(angle),
+  });
+{% endhighlight %}
+
+  <p>
+    If we want to find the coordinates of a point on a circle, all we need to do is plug an angle into our sine and cosine functions. Another convenience is that the unit circle has a radius of one, we can easily scale our coordinates by multiplying by the radius of our larger circle. We could even draw spiral by setting variables for angle and radius, then incrementing both variables over time. Below is an example of a spiral drawn on a canvas element which I made some time before learning <i>why</i> this works.
+  </p>
+
+  <p>
+    <div class="codepen-embed">
+      <p data-height="500" data-slug-hash="avyGEr" data-default-tab="result" data-user="n33kos" data-embed-version="2" data-theme-id="dark" class="codepen"></p>
+      <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    </div>
+  </p>
+</div>
