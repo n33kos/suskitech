@@ -5,8 +5,8 @@
     <description>A portfolio of work by Nicholas Suski</description>
     <link>http://suskitech.org/</link>
     <atom:link href="http://suskitech.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Dec 2018 19:26:23 -0700</pubDate>
-    <lastBuildDate>Sun, 09 Dec 2018 19:26:23 -0700</lastBuildDate>
+    <pubDate>Sun, 17 Mar 2019 13:42:27 -0600</pubDate>
+    <lastBuildDate>Sun, 17 Mar 2019 13:42:27 -0600</lastBuildDate>
     <generator>Jekyll v3.8.0</generator>
     
     
@@ -32,7 +32,7 @@
         <title>Bard's Chest</title>
         <description>&lt;div class=&quot;margin-bottom-15&quot;&gt;
 	&lt;div class=&quot;margin-bottom-15&quot;&gt;
-		&lt;iframe src=&quot;/bardschest&quot;&gt;&lt;/if...</description>
+		&lt;iframe src=&quot;/bardschest&quot; styl...</description>
         <pubDate>Sun, 16 Sep 2018 00:00:00 -0600</pubDate>
         <link>http://suskitech.org/code/bards-chest/</link>
         <guid isPermaLink="true">http://suskitech.org/code/bards-chest/</guid>
@@ -116,22 +116,6 @@
         <pubDate>Thu, 14 Jun 2018 00:00:00 -0600</pubDate>
         <link>http://suskitech.org/blog/operation-webgl/</link>
         <guid isPermaLink="true">http://suskitech.org/blog/operation-webgl/</guid>
-        
-        
-        <category>Blog</category>
-        
-    </item>
-    
-    
-    
-    <item>
-        <title>First Blog Post</title>
-        <description>&lt;div&gt;
-  &lt;p&gt;
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in...</description>
-        <pubDate>Wed, 13 Jun 2018 00:00:00 -0600</pubDate>
-        <link>http://suskitech.org/blog/first/</link>
-        <guid isPermaLink="true">http://suskitech.org/blog/first/</guid>
         
         
         <category>Blog</category>

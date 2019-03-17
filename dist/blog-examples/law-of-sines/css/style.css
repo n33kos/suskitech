@@ -1,0 +1,143 @@
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
+.inputAB,
+.inputAC {
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
+.labelA,
+.labelB,
+.labelC,
+.angleA,
+.angleB,
+.angleC,
+.sideA,
+.sideB,
+.sideC {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 0;
+  top: 0;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 20px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.sideA,
+.sideB,
+.sideC,
+.angleA,
+.angleB,
+.angleC {
+  font-size: 14px;
+}
+.sideA:nth-of-type(1),
+.sideB:nth-of-type(1),
+.sideC:nth-of-type(1),
+.angleA:nth-of-type(1),
+.angleB:nth-of-type(1),
+.angleC:nth-of-type(1) {
+  color: red;
+}
+.sideA:nth-of-type(2),
+.sideB:nth-of-type(2),
+.sideC:nth-of-type(2),
+.angleA:nth-of-type(2),
+.angleB:nth-of-type(2),
+.angleC:nth-of-type(2) {
+  color: green;
+}
+.sideA:nth-of-type(3),
+.sideB:nth-of-type(3),
+.sideC:nth-of-type(3),
+.angleA:nth-of-type(3),
+.angleB:nth-of-type(3),
+.angleC:nth-of-type(3) {
+  color: blue;
+}
+
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+label:last-of-type {
+  top: 20px;
+}
+
+.solution {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 16px;
+  line-height: 2;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+.solution .col {
+  display: inline-block;
+  width: calc(30% - 40px);
+  text-align: center;
+  margin: 0 20px;
+}
+.solution .col:nth-child(1) {
+  color: red;
+}
+.solution .col:nth-child(2) {
+  color: green;
+}
+.solution .col:nth-child(3) {
+  color: blue;
+}
+.solution .row {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+.solution .row:first-of-type .col {
+  border-bottom: 1px solid black;
+  position: relative;
+}
+.solution .row:first-of-type .col:nth-child(1):after, .solution .row:first-of-type .col:nth-child(2):after {
+  content: '=';
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  color: black;
+}
+
+.side {
+  text-decoration: overline;
+}
+
+canvas {
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}

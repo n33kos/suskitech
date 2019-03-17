@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Law Of Sines</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <canvas id="canvas"></canvas>
+    <div class="labelA red">A</div>
+    <div class="labelB green">B</div>
+    <div class="labelC blue">C</div>
+
+    <div class="angleA red">10</div>
+    <div class="angleB green">10</div>
+    <div class="angleC blue">10</div>
+
+    <div class="sideA red">10</div>
+    <div class="sideB blue">10</div>
+    <div class="sideC green">10</div>
+
+    <label class="inputAB">
+      AB <input type="range" min="0" max="100" value="75">
+    </label>
+    <label class="inputAC">
+      AC <input type="range" min="0" max="100" value="75">
+    </label>
+
+    <code class="solution">
+      <div class="row">
+        <div class="col sinC">sin(A)</div>
+        <div class="col sinB">sin(B)</div>
+        <div class="col sinA">sin(C)</div>
+      </div>
+      <div class="row">
+        <div class="col BC">BC</div>
+        <div class="col AC">AC</div>
+        <div class="col AB">AB</div>
+      </div>
+    </code>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="js/index.js"></script>
+  </body>
+</html>

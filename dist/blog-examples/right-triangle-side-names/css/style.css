@@ -1,0 +1,77 @@
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+.hypotenuse,
+.adjacent,
+.opposite {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: sans-serif;
+}
+
+.hypotenuse,
+.h {
+  color: red;
+}
+
+.adjacent,
+.a {
+  color: blue;
+}
+
+.opposite,
+.o {
+  color: green;
+}
+
+.triggerA,
+.triggerB,
+.triggerC {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 0;
+  top: 0;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 20px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.triggerA:not(.triggerC),
+.triggerB:not(.triggerC),
+.triggerC:not(.triggerC) {
+  cursor: pointer;
+}
+.triggerA:not(.triggerC):hover, .triggerA:not(.triggerC).active,
+.triggerB:not(.triggerC):hover,
+.triggerB:not(.triggerC).active,
+.triggerC:not(.triggerC):hover,
+.triggerC:not(.triggerC).active {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.solution {
+  position: absolute;
+  top: 5vw;
+  left: 5vw;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.side {
+  text-decoration: overline;
+}
+
+canvas {
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}

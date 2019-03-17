@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Law Of Cosines (solving an angle)</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <canvas id="canvas"></canvas>
+
+    <div class="labelTheta">𝝝</div>
+    <div class="labelA red">a</div>
+    <div class="labelB">b</div>
+    <div class="labelC">c</div>
+
+    <div class="angleTheta">10</div>
+
+    <div class="sideA red">10</div>
+    <div class="sideB">10</div>
+    <div class="sideC">10</div>
+
+    <label class="inputAB">
+      b <input type="range" min="0" max="100" value="75">
+    </label>
+    <label class="inputAC">
+      c <input type="range" min="0" max="100" value="75">
+    </label>
+
+    <code class="solution">
+      <div>
+        <span class="red">
+          <span class="sideA inlineSide">a</span>²
+        </span>
+        =
+        <span class="sideB inlineSide">b</span>²
+        + <span class="sideC inlineSide">c</span>²
+        - 2
+        ⋆ <span class="sideB inlineSide">b</span>
+        ⋆ <span class="sideC inlineSide">c</span>
+        ⋆ cos(<span class="angleTheta inlineSide">&Theta;</span>)
+      </div>
+    </code>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="js/index.js"></script>
+  </body>
+</html>

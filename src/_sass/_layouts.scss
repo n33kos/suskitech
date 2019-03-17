@@ -4,4 +4,11 @@
       position: relative;
       width: calc(100% + #{$page-gutter * 2});
     }
+
+    .blog-example-iframe {
+      border-radius: 4px;
+      border: 1px solid black;
+      height: 400px;
+      width: calc(100% + #{$page-gutter * 2});
+    }
 }

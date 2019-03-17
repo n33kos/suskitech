@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Solving Angles In Right Triangles (arccos)</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <canvas id="canvas"></canvas>
+
+    <div class="labelA">A</div>
+    <div class="labelB">B</div>
+    <div class="labelC">C</div>
+
+    <div class="sideInputBC">
+      <input type="text" value="10" placeholder="BC" />
+    </div>
+    <div class="sideInputAB">
+      <input type="text" value="18" placeholder="AB" />
+    </div>
+    <div class="measurement angleB red"></div>
+
+    <code class="solution">
+      <ol>
+        <li>
+          ∠𝛳 = Arccos(Adjacent / Hypotenuse)
+        </li>
+
+        <li>
+          <span class="red">∠B</span> = arccos(<span class="sideBC">6</span> / <span class="sideAB">10</span>)
+        </li>
+
+        <li>
+          <span class="red">∠B</span> = <span class="angleB">30</span>
+        </li>
+      </ol>
+    </code>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="js/index.js"></script>
+  </body>
+</html>

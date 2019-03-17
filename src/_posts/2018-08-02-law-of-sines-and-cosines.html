@@ -21,10 +21,7 @@ excerpt: "Up until this point we've focused on right triangles, now it's time en
   </p>
 
   <p>
-    <div class="codepen-embed">
-      <p data-height="500" data-slug-hash="QBOXar" data-default-tab="result" data-user="n33kos" data-embed-version="2" data-theme-id="dark" class="codepen"></p>
-      <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-    </div>
+    <iframe class="blog-example-iframe" src="/blog-examples/law-of-sines"></iframe>
   </p>
 
   <p>
@@ -43,18 +40,15 @@ excerpt: "Up until this point we've focused on right triangles, now it's time en
   </h4>
 
   <p>
-    In my examples for this page, I didn't use the law of sines. This is because I keep the vertex coordinates in an array, then draw lines between them in canvas. It makes it easy to get the side lengths using the distance formula but I still need to solve the angles, so I use <b>the law of cosines</b> to measure the angles.
+    <b>The law of cosines</b> as displayed below is an adaptation of the Pythagorean theorem, given two side lengths and the angle between them we can use it to determine the length if the angle's opposite. It looks like this <code class="inline">a² = b² + c² - 2⋆b⋆c⋆cos(&Theta;)</code>.
   </p>
 
   <p>
-    <div class="codepen-embed">
-      <p data-height="600" data-slug-hash="NBpdjG" data-default-tab="result" data-user="n33kos" data-embed-version="2" data-theme-id="dark" class="codepen"></p>
-      <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-    </div>
+    <iframe class="blog-example-iframe" src="/blog-examples/law-of-cosines-solving-an-angle"></iframe>
   </p>
 
   <p>
-    <b>The law of cosines</b> as displayed above is an adaptation of the Pythagorean theorem, given two side lengths and the angle between them we can use it to determine the length if the angle's opposite. It looks like this <code class="inline">a² = b² + c² - 2⋆b⋆c⋆cos(&Theta;)</code>. For my examples I had the value of a, b, and c but needed the value of the angles. I rearranged the equation and created a function which returns the angle of &Theta;, then call it once for each angle.
+    In my examples for this page, I didn't use the law of sines. This is because I keep the vertex coordinates in an array, then draw lines between them in canvas. It makes it easy to get the side lengths using the distance formula but I still need to solve the angles, so I use <b>the law of cosines</b> to measure the angles. I had the value of a, b, and c but needed the value of the angles so I rearranged the equation and created a function which returns the angle of &Theta;, which is called once for each angle.
   </p>
 
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Solving Sides In Right Triangles (tangent)</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <canvas id="canvas"></canvas>
+    <div class="labelA">A</div>
+    <div class="labelB">B</div>
+    <div class="labelC">C</div>
+    <div class="sideInput">
+      <input type="text" value="10" placeholder="BC" />
+    </div>
+    <div class="angleInput">
+      <input type="text" value="50" placeholder="∠B" /><span class="degree">°</span>
+    </div>
+    <div class="opposite sideAC red"></div>
+    <code class="solution">
+      <ol>
+        <li>
+          Tangent = Opposite / Adjacent
+        </li>
+
+        <li>
+          tan(<span class="angleB">30</span>°) = <span class="side red">AC</span> / <span class="sideBC">12</span>
+        </li>
+
+        <li>
+          <span class="sideBC">12</span> * tan(<span class="angleB">30</span>°) = <span class="side red">AC</span>
+        </li>
+
+        <li>
+          <span class="side red">AC</span> = <span class="sideAC">?</span>
+        </li>
+      </ol>
+    </code>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="js/index.js"></script>
+  </body>
+</html>
