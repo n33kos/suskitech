@@ -84,3 +84,22 @@ p {
     max-width: 100%;
   }
 }
+
+//---------------------Helpers--------------------
+.flex-spread-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}

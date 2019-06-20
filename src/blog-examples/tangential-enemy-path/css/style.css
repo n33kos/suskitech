@@ -1,0 +1,50 @@
+body, html {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #96bfe2
+}
+
+.Floor {
+  background-color: #1c711c;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.Floor:after {
+  background-color: #482919;
+  height: 80%;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  content: '';
+}
+
+canvas {
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+@media (min-width: 600px) {
+  canvas {
+
+
+  }
+}

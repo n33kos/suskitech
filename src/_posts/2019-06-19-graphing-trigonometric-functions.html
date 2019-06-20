@@ -1,0 +1,85 @@
+---
+layout: post
+title: "Graphing Trigonometric Functions"
+date: 2019-06-19 00:00
+author: n33kos
+category: Blog
+permalink: /blog/graphing-trigonometric-functions/
+excerpt: "Graphing the trigonometric functions provides insight into the functions themselves, but also how they can also be used to drive some great motion."
+---
+<div>
+  <p>
+    Graphing the trigonometric functions provides insight into the functions themselves, but also how they can also be used to drive some great motion. Let's start by graphing the sine function <code class="inline">sin(Ɵ)</code>. The Y axis will represent the result of the function while the X axis will represent Ɵ on its wild journey from -2π to 2π. In other words, the X axis will cycle through two full rotations of a circle (in radians).
+  </p>
+
+  <p>
+    <iframe class="blog-example-iframe" src="/blog-examples/graph-of-sine"></iframe>
+  </p>
+
+  <p>
+    Hey look, it's a wave! A sinusoidal wave is a mathematical curve that describes a smooth periodic oscillation. Another thing to note is that the wave continues even if Ɵ is negative. You probably recognize this pattern if you've ever messed around with a synthesizer or looked at the waveform of an audio file. With <code class="inline">sin(Ɵ)</code> and <code class="inline">cos(Ɵ)</code>, oscillation is the name of the game. The <i>range</i> of both these functions is <code class="inline">-1 <= sin(Ɵ) <= 1</code>, so given a constantly incrementing (or decrementing) value for Ɵ the result will oscillate between -1 and 1.
+  </p>
+
+  <p>
+    Cool, but how can I exploit this knowledge to draw some stuff? Similar to the unit circle we simply plug the sine or cosine functions into the position attribute of whatever we want to draw. Let's say you have an enemy moving across the screen at a rate of 1 pixel per render cycle. Now let's say you want that enemy to move up and down smoothly to provide an obstacle for the user. Just set <code class="inline">position.y = (sin(position.x) * height)</code> and you're off to the races.
+  <p>
+
+  <p>
+    <iframe class="blog-example-iframe" src="/blog-examples/sinusoidal-enemy-path"></iframe>
+  </p>
+
+  <p>
+    Whoa, look at that scary enemy go. What smooth oscillation, what sharp teeth, so simple! Now to be fair, I had to do a few things to get this lil bub moving in the way I wanted. The vertical movement resulting from the function I posted above would actually be too rapid for my taste. To solve that, I divide the X position by an arbitrary number(In a real application you would probably want to use a deltaTime here for consistency across devices) then add to the Y position, keeping the enemy centered in the canvas. Below is the snippet of code running in a loop to make this happen.
+  </p>
+
+  {% highlight javascript %}
+  position = {
+    x : position.x - 5,
+    y : (canvas.height / 2) + Math.sin(position.x / 20) * 30,
+  };{% endhighlight %}
+
+  <p>
+    Now let's turn our attention to tangent because it doesn't create a simple oscillation like we've seen so far. The range of tangent is <code class="inline">infinity <= tan(Ɵ) <= infinity</code>, how does that work? As Ɵ gets closer to π/2 it blasts up into infinity. The same happens as it reaches -π/2 and the cycle repeats as Ɵ reaches each factor of π. The end result is a line stretching into infinity with a kind of plateau in the center.
+    Below is a graph of the tangent function for you to nerd out on.
+  </p>
+
+  <p>
+    <iframe class="blog-example-iframe" src="/blog-examples/graph-of-tangent"></iframe>
+  </p>
+
+  <p>
+    Now we can use tangent in an example, let's try to give our enemy "explosive" movement where it moves very rapidly then slows down (or vice versa). This time we will use the tangent function on the X position. We will also make the enemy red because we need some variety in life. Looking at the code you can see we set a separate increment value then hit it with a ++ each render cycle. We're using that value as Ɵ to drive the X position. You can also see that I'm multiplying the result by -scale (the scale of the enemy). This helps broaden the spread of the movement to keep it form being too jerky and short.
+  </p>
+
+  {% highlight javascript %}
+  var increment = 1;
+  ...
+  position = {
+    x : Math.tan(increment / 50) * -scale,
+    y : canvas.height / 2 - (scale / 2),
+  };
+  increment++;{% endhighlight %}
+
+  <p>
+    <iframe class="blog-example-iframe" src="/blog-examples/tangential-enemy-path"></iframe>
+  </p>
+
+  <p>
+    There are more functions than the three I've shown. The reciprocal functions (cosecant, secant, and cotangent) aren't included by default in javascript's <code class="inline">Math</code> lib. Luckily, all of the reciprocals can be created by dividing 1 by the result of the function. For example, sine's reciprocal is cosecant so we can define a function like this <code class="inline">const cosecant = (n) => 1 / Math.sin(n)</code>. We could also just do that division inline with our usage but this way is a little more explicit. In this last example I'll graph out the remaining three functions for you to see but then its up to you to decide how you could use them in your own projects, imagination time!
+  </p>
+
+  <p>
+    <div class="flex-spread-container">
+      <span class="red">red - cosecant</span>
+      <span class="green">green - secant</span>
+      <span class="blue">blue - cotangent</span>
+    </div>
+    <iframe class="blog-example-iframe" src="/blog-examples/graph-of-reciprocals"></iframe>
+  </p>
+
+  <p>
+    <i>Browsers Beware:</i> at the time of writing this article, safari had some real trouble drawing a curve to an infinite point. It worked just fine in chrome and firefox but if I tried to draw a curve in safari using the <code class="inline">Math.tan()</code> It would nope out and stop drawing the curve. As a result I was forced to add a minmax function which kept the integers within a reasonable limit.
+  </p>
+
+  {% highlight javascript %}const minmax = (n) => Math.max(-10000, Math.min(10000, n)){% endhighlight %}
+</div>
