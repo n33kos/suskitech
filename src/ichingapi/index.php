@@ -1,7 +1,5 @@
 <?php
-	require './hexagram.php';
-	require './iChing.php';
-	require './iChingDesc.php';
+	require './Hexagram.php';
 
 	header("Access-Control-Allow-Origin: *");
 
@@ -16,7 +14,7 @@
 
 	function home() {
 		echo '
-			<h1>Welcome to the iChing API 0.0.1</h1>
+			<h1>Welcome to the iChing API 0.1.0</h1>
 			<h3>/hexagram?cast=threecoin&lines=997867</h3>
 			<ul>
 				<li><pre>?lines=997876</pre>Get hexagram (6,7,8,9 notation))</li>
@@ -32,7 +30,7 @@
 			}
 		}
 
-		echo json_encode ( new Hexagram($lines) );
+		echo json_encode( new Hexagram($lines) );
 		return 200;
 	}
 
