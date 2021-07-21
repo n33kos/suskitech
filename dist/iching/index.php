@@ -59,8 +59,6 @@
 
 			<div class="hexagram">
 				<?php
-					echo $result->numbers;
-
 					for ($i = strlen($result->numbers) - 1; $i >= 0; $i--){
 						switch ($result->numbers[$i]) {
 							case '6':
@@ -83,28 +81,35 @@
 			</div>
 
 			<div class="trigrams">
-				<div class="uppertrigram <?php echo $result->upperTrigram ?>">
-					<?php echo $result->upperTrigram ?>
+				<div class="uppertrigram <?php echo $result->upperTrigram; ?>">
+					<?php echo $result->upperTrigram; ?>
 				</div>
-				<div class="lowertrigram <?php echo $result->lowerTrigram ?>">
-					<?php echo $result->lowerTrigram ?>
+				<div class="lowertrigram <?php echo $result->lowerTrigram; ?>">
+					<?php echo $result->lowerTrigram; ?>
 				</div>
 			</div>
 
 			<h3>The Judgement</h3>
-			<?php echo $result->judgement ?>
+			<p>
+				<?php echo $result->judgement ?>
+			</p>
 
 			<h3>The Image</h3>
-			<?php echo $result->image ?>
+			<p>
+				<?php echo $result->image ?>
+			</p>
 
 			<?php
 				if (!empty($result->lines)) {
 					echo '<h3>The Lines</h3>';
+					echo '<p>';
 					echo $result->lines;
+					echo '</p>';
 				}
 			?>
 
-			<br><a href="/iching/"> < Back</a>
+			<br>
+			<a href="/iching/"> < Back</a>
 
 		<?php else: ?>
 
