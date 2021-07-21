@@ -119,13 +119,13 @@ jQuery(document).ready(function () {
 	}
 
 	//Init the canvas
-	element = document.getElementById("canvas1");
-	c = element.getContext("2d");
+	var element = document.getElementById("canvas1");
+	var c = element.getContext("2d");
 	//Set the width and heith of the canvas
 	element.width = CellDensity * expandFactor;
 	element.height = CellDensity * expandFactor;
 	// create a new imagedata holder
-	imageData = c.createImageData(CellDensity * expandFactor, CellDensity * expandFactor);
+	var imageData = c.createImageData(CellDensity * expandFactor, CellDensity * expandFactor);
 	var parentChildOffset = Math.floor(element.width / expandFactor);
 
 	//-------Start with an image instead of random colors--------
@@ -155,6 +155,7 @@ jQuery(document).ready(function () {
 	}
 
 	function setPixel(imageData, x, y, r, g, b, a) {
+		var index;
 		if (expandPixels2x) {
 			index = (x + y * imageData.width) * 4;
 			imageData.data[index] = r;
@@ -263,7 +264,7 @@ jQuery(document).ready(function () {
 			    redIncrement = 0,
 			    greenIncrement = 0,
 			    blueIncrement = 0;
-			oldRGB = colorArray[i], parentChildOffset = CellDensity;
+			var oldRGB = colorArray[i], parentChildOffset = CellDensity;
 
 			//Get prev/next pixel
 			if (i + 1 <= CellDensity * CellDensity) var nextRGB = colorArray[i + 1];

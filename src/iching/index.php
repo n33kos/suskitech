@@ -84,7 +84,11 @@
 
 			<div class="trigrams">
 				<div class="uppertrigram <?php echo $result->upperTrigram ?>">
+					<?php echo $result->upperTrigram ?>
+				</div>
 				<div class="lowertrigram <?php echo $result->lowerTrigram ?>">
+					<?php echo $result->lowerTrigram ?>
+				</div>
 			</div>
 
 			<h3>The Judgement</h3>
