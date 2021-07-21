@@ -131,7 +131,7 @@
 				<div class="colorcube Earth">&nbsp;</div>
 				<div class="colorcube Mountain">&nbsp;</div>
 				<div class="colorcube Water">&nbsp;</div>
-				<div class="colorcube Wood">&nbsp;</div>
+				<div class="colorcube Wind">&nbsp;</div>
 				<div class="colorcube Thunder">&nbsp;</div>
 				<div class="colorcube Fire">&nbsp;</div>
 				<div class="colorcube Lake">&nbsp;</div>
