@@ -2,7 +2,7 @@ body{
 	font-family: 'Ubuntu Mono', monospace;
 	height:100%;
 	background: #444;
-	margin: 0; 
+	margin: 0;
 	text-align: center;
 }
 .container{
@@ -168,7 +168,7 @@ h3{
 .Water{
 	background:#0066CC
 }
-.Wood{
+.Wind{
 	background:#336600;
 }
 .Thunder{
